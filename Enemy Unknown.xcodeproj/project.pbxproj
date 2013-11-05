@@ -22,6 +22,10 @@
 		0111251918297E3400254757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F818297E3400254757 /* UIKit.framework */; };
 		0111252118297E3400254757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0111251F18297E3400254757 /* InfoPlist.strings */; };
 		0111252318297E3400254757 /* Enemy_UnknownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111252218297E3400254757 /* Enemy_UnknownTests.m */; };
+		0111252D182981EE00254757 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252C182981EE00254757 /* GameKit.framework */; };
+		0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252E18298AE800254757 /* MediaPlayer.framework */; };
+		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
+		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,11 @@
 		0111251E18297E3400254757 /* Enemy UnknownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Enemy UnknownTests-Info.plist"; sourceTree = "<group>"; };
 		0111252018297E3400254757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0111252218297E3400254757 /* Enemy_UnknownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy_UnknownTests.m; sourceTree = "<group>"; };
+		0111252C182981EE00254757 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		0111252E18298AE800254757 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0111253C18299A5200254757 /* TrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrailerViewController.h; path = Controllers/TrailerViewController.h; sourceTree = "<group>"; };
+		0111253D18299A5200254757 /* TrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrailerViewController.m; path = Controllers/TrailerViewController.m; sourceTree = "<group>"; };
+		011125451829A4F100254757 /* demo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.m4v; path = Videos/demo.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */,
+				0111252D182981EE00254757 /* GameKit.framework in Frameworks */,
 				011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */,
 				011124F918297E3400254757 /* UIKit.framework in Frameworks */,
 				011124F518297E3300254757 /* Foundation.framework in Frameworks */,
@@ -103,6 +114,8 @@
 		011124F318297E3300254757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0111252E18298AE800254757 /* MediaPlayer.framework */,
+				0111252C182981EE00254757 /* GameKit.framework */,
 				011124F418297E3300254757 /* Foundation.framework */,
 				011124F618297E3400254757 /* CoreGraphics.framework */,
 				011124F818297E3400254757 /* UIKit.framework */,
@@ -114,12 +127,14 @@
 		011124FA18297E3400254757 /* Enemy Unknown */ = {
 			isa = PBXGroup;
 			children = (
+				011125361829974200254757 /* Resources */,
+				0111253318298B6500254757 /* Controllers */,
+				0111250C18297E3400254757 /* Enemy_UnknownViewController.h */,
+				0111250D18297E3400254757 /* Enemy_UnknownViewController.m */,
 				0111250318297E3400254757 /* Enemy_UnknownAppDelegate.h */,
 				0111250418297E3400254757 /* Enemy_UnknownAppDelegate.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
-				0111250C18297E3400254757 /* Enemy_UnknownViewController.h */,
-				0111250D18297E3400254757 /* Enemy_UnknownViewController.m */,
 				0111250F18297E3400254757 /* Images.xcassets */,
 				011124FB18297E3400254757 /* Supporting Files */,
 			);
@@ -153,6 +168,31 @@
 				0111251F18297E3400254757 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0111253318298B6500254757 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0111253C18299A5200254757 /* TrailerViewController.h */,
+				0111253D18299A5200254757 /* TrailerViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		011125361829974200254757 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				011125371829974900254757 /* Trailer */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		011125371829974900254757 /* Trailer */ = {
+			isa = PBXGroup;
+			children = (
+				011125451829A4F100254757 /* demo.m4v */,
+			);
+			name = Trailer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
+				011125461829A4F100254757 /* demo.m4v in Resources */,
 				0111251018297E3400254757 /* Images.xcassets in Resources */,
 				0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */,
 				011124FF18297E3400254757 /* InfoPlist.strings in Resources */,
@@ -255,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0111250518297E3400254757 /* Enemy_UnknownAppDelegate.m in Sources */,
+				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				0111250118297E3400254757 /* main.m in Sources */,
 				0111250E18297E3400254757 /* Enemy_UnknownViewController.m in Sources */,
 			);
