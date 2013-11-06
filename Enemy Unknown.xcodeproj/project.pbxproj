@@ -242,11 +242,6 @@
 				CLASSPREFIX = "Enemy Unknown";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Comp 446";
-				TargetAttributes = {
-					0111251418297E3400254757 = {
-						TestTargetID = 011124F018297E3300254757;
-					};
-				};
 			};
 			buildConfigurationList = 011124EC18297E3300254757 /* Build configuration list for PBXProject "Enemy Unknown" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -460,7 +455,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Enemy Unknown.app/Enemy Unknown";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -474,7 +468,6 @@
 				);
 				INFOPLIST_FILE = "Enemy UnknownTests/Enemy UnknownTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -483,7 +476,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Enemy Unknown.app/Enemy Unknown";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -493,7 +485,6 @@
 				GCC_PREFIX_HEADER = "Enemy Unknown/Enemy Unknown-Prefix.pch";
 				INFOPLIST_FILE = "Enemy UnknownTests/Enemy UnknownTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -517,6 +508,7 @@
 				0111252818297E3400254757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0111252918297E3400254757 /* Build configuration list for PBXNativeTarget "Enemy UnknownTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +517,7 @@
 				0111252B18297E3400254757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
