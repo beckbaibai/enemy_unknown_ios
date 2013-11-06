@@ -15,17 +15,25 @@
 @implementation TrailerViewController
 
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self playMovie];
+}
 
--(IBAction)playMovie:(id)sender
+-(void)playMovie
 {
     NSString *filepath   =    [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"m4v"];
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     MPMoviePlayerViewController *moviePlayerView = [[MPMoviePlayerViewController alloc] initWithContentURL:fileURL];
-    [moviePlayerView.view setFrame: CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.height, [[UIScreen mainScreen] applicationFrame].size.width)];
-    //moviePlayerView.moviePlayer.controlStyle = MPMediaTypeMusicVideo;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [moviePlayerView.view setFrame: self.view.bounds];
+    moviePlayerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
     [self.view addSubview:moviePlayerView.view];
-    [moviePlayerView.moviePlayer setFullscreen:YES];
+    //[moviePlayerView.moviePlayer setFullscreen:YES];
+    
     [moviePlayerView.moviePlayer play];
+    //moviePlayerView.moviePlayer.fullscreen = YES;
     
 }
 
