@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="T6I-BJ-pWp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Enemy Unknown View Controller-->
+        <!--Enemy Unknown View Controller - Game Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EnemyUnknownViewController" sceneMemberID="viewController">
+                <viewController title="Game Menu" id="BYZ-38-t0r" customClass="EnemyUnknownViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Uq-Vv-EoJ"/>
                         <viewControllerLayoutGuide type="bottom" id="vaq-Uq-NLz"/>
@@ -17,9 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fZ-hN-3V6">
-                                <rect key="frame" x="577" y="382" width="46" height="30"/>
+                                <rect key="frame" x="410" y="308" width="204" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Play Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,9 +28,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-vu-h3f">
-                                <rect key="frame" x="588" y="599" width="46" height="30"/>
+                                <rect key="frame" x="395" y="545" width="235" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Game Center">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -45,12 +47,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1405" y="141"/>
+            <point key="canvasLocation" x="-287" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Game Center-->
         <scene sceneID="diD-nv-ORY">
             <objects>
-                <viewController id="Dz0-Of-Ujb" sceneMemberID="viewController">
+                <viewController title="Game Center" id="Dz0-Of-Ujb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j45-4I-cYQ"/>
                         <viewControllerLayoutGuide type="bottom" id="TU4-d3-RNo"/>
@@ -65,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPG-4g-UF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="628"/>
+            <point key="canvasLocation" x="1060" y="694"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="8oV-eC-LMA">
@@ -87,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-2541" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Choose Scenario-->
         <scene sceneID="f5w-4Z-MDd">
             <objects>
-                <viewController id="JqO-Aq-BVx" sceneMemberID="viewController">
+                <viewController title="Choose Scenario" id="JqO-Aq-BVx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAg-zn-wQH"/>
                         <viewControllerLayoutGuide type="bottom" id="2kt-B9-cht"/>
@@ -100,9 +102,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKc-TM-x5e">
-                                <rect key="frame" x="489" y="344" width="46" height="30"/>
+                                <rect key="frame" x="470" y="356" width="85" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Start!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -117,12 +120,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99I-Io-bQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215" y="-820"/>
+            <point key="canvasLocation" x="1060" y="-714"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Web View Controller - Scenario-->
         <scene sceneID="TzU-LU-pOW">
             <objects>
-                <viewController id="SMb-AV-ZGK" sceneMemberID="viewController">
+                <viewController title="Scenario" id="SMb-AV-ZGK" customClass="GameWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ImY-xw-Mzz"/>
                         <viewControllerLayoutGuide type="bottom" id="UXZ-XF-hRw"/>
@@ -141,10 +144,32 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="HHm-aW-CCj"/>
+                    <connections>
+                        <outlet property="webView" destination="rnU-Ku-ltT" id="Llf-9D-hNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ls3-7m-0zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="-834"/>
+            <point key="canvasLocation" x="2254" y="-714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pq7-Q1-ubJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T6I-BJ-pWp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PPF-AG-Z8j">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5wn-1m-bn4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gv3-z3-kWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1459" y="147"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
