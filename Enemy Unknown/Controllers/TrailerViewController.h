@@ -11,6 +11,6 @@
 
 
 @interface TrailerViewController : UIViewController
--(IBAction)playMovie:(id)sender;
+-(void)playMovie;
 
 @end
