@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JqO-Aq-BVx" kind="push" id="oZT-ZL-FyT"/>
+                                    <segue destination="JqO-Aq-BVx" kind="custom" identifier="" customClass="NoAnimationModalSegue" id="oZT-ZL-FyT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-vu-h3f">
@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dz0-Of-Ujb" kind="push" id="nzX-Od-eVD"/>
+                                    <segue destination="Dz0-Of-Ujb" kind="custom" customClass="NoAnimationModalSegue" id="nzX-Od-eVD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1405" y="141"/>
+            <point key="canvasLocation" x="-1107" y="183"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="diD-nv-ORY">
@@ -78,14 +78,26 @@
                     <view key="view" contentMode="scaleToFill" id="ljo-a5-WBj">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dRa-Pd-4WB" appends="YES" id="NnP-Pq-h2V"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="trailerToMenu" customClass="NoAnimationModalSegue" id="z1p-eK-gwZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aB-qH-CLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dRa-Pd-4WB">
+                    <connections>
+                        <action selector="onTap:" destination="gnl-xc-DFo" id="EH7-sd-5hH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2541" y="134"/>
+            <point key="canvasLocation" x="-2285" y="183"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f5w-4Z-MDd">
@@ -106,7 +118,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SMb-AV-ZGK" kind="push" id="z5X-Gs-4a4"/>
+                                    <segue destination="SMb-AV-ZGK" kind="custom" customClass="NoAnimationModalSegue" id="z5X-Gs-4a4"/>
                                 </connections>
                             </button>
                         </subviews>

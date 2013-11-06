@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */; };
 		011124F518297E3300254757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F418297E3300254757 /* Foundation.framework */; };
 		011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F618297E3400254757 /* CoreGraphics.framework */; };
 		011124F918297E3400254757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F818297E3400254757 /* UIKit.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010B67861829F77F005C9B4B /* NoAnimationModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoAnimationModalSegue.h; path = Controllers/NoAnimationModalSegue.h; sourceTree = "<group>"; };
+		010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoAnimationModalSegue.m; path = Controllers/NoAnimationModalSegue.m; sourceTree = "<group>"; };
 		011124F118297E3300254757 /* Enemy Unknown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enemy Unknown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		011124F418297E3300254757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		011124F618297E3400254757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 			children = (
 				0111253C18299A5200254757 /* TrailerViewController.h */,
 				0111253D18299A5200254757 /* TrailerViewController.m */,
+				010B67861829F77F005C9B4B /* NoAnimationModalSegue.h */,
+				010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			files = (
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
+				010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */,
 				0111250118297E3400254757 /* main.m in Sources */,
 				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
 			);

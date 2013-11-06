@@ -1,5 +1,5 @@
 //
-//  TrailerViewController.h
+//  NoAnimationModalSegue.h
 //  Enemy Unknown
 //
 //  Created by Frank Zhang on 11/5/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
 
+@interface NoAnimationModalSegue : UIStoryboardSegue
 
-@interface TrailerViewController : UIViewController
 @end
