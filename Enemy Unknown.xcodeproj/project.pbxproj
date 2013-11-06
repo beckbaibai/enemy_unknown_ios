@@ -7,40 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010B67851829CB58005C9B4B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010B67841829CB58005C9B4B /* StoreKit.framework */; };
 		011124F518297E3300254757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F418297E3300254757 /* Foundation.framework */; };
 		011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F618297E3400254757 /* CoreGraphics.framework */; };
 		011124F918297E3400254757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F818297E3400254757 /* UIKit.framework */; };
 		011124FF18297E3400254757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 011124FD18297E3400254757 /* InfoPlist.strings */; };
 		0111250118297E3400254757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250018297E3400254757 /* main.m */; };
-		0111250518297E3400254757 /* Enemy_UnknownAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250418297E3400254757 /* Enemy_UnknownAppDelegate.m */; };
+		0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */; };
 		0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111250618297E3400254757 /* Main_iPhone.storyboard */; };
 		0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111250918297E3400254757 /* Main_iPad.storyboard */; };
-		0111250E18297E3400254757 /* Enemy_UnknownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250D18297E3400254757 /* Enemy_UnknownViewController.m */; };
+		0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250D18297E3400254757 /* EnemyUnknownViewController.m */; };
 		0111251018297E3400254757 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0111250F18297E3400254757 /* Images.xcassets */; };
-		0111251718297E3400254757 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111251618297E3400254757 /* XCTest.framework */; };
-		0111251818297E3400254757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F418297E3300254757 /* Foundation.framework */; };
-		0111251918297E3400254757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F818297E3400254757 /* UIKit.framework */; };
-		0111252118297E3400254757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0111251F18297E3400254757 /* InfoPlist.strings */; };
-		0111252318297E3400254757 /* Enemy_UnknownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111252218297E3400254757 /* Enemy_UnknownTests.m */; };
 		0111252D182981EE00254757 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252C182981EE00254757 /* GameKit.framework */; };
 		0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252E18298AE800254757 /* MediaPlayer.framework */; };
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
 		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0111251A18297E3400254757 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 011124E918297E3300254757 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 011124F018297E3300254757;
-			remoteInfo = "Enemy Unknown";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		010B67841829CB58005C9B4B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		011124F118297E3300254757 /* Enemy Unknown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enemy Unknown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		011124F418297E3300254757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		011124F618297E3400254757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,18 +32,14 @@
 		011124FE18297E3400254757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0111250018297E3400254757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0111250218297E3400254757 /* Enemy Unknown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Enemy Unknown-Prefix.pch"; sourceTree = "<group>"; };
-		0111250318297E3400254757 /* Enemy_UnknownAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy_UnknownAppDelegate.h; sourceTree = "<group>"; };
-		0111250418297E3400254757 /* Enemy_UnknownAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy_UnknownAppDelegate.m; sourceTree = "<group>"; };
+		0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyUnknownAppDelegate.h; sourceTree = "<group>"; };
+		0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyUnknownAppDelegate.m; sourceTree = "<group>"; };
 		0111250718297E3400254757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		0111250A18297E3400254757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		0111250C18297E3400254757 /* Enemy_UnknownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy_UnknownViewController.h; sourceTree = "<group>"; };
-		0111250D18297E3400254757 /* Enemy_UnknownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy_UnknownViewController.m; sourceTree = "<group>"; };
+		0111250C18297E3400254757 /* EnemyUnknownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyUnknownViewController.h; sourceTree = "<group>"; };
+		0111250D18297E3400254757 /* EnemyUnknownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyUnknownViewController.m; sourceTree = "<group>"; };
 		0111250F18297E3400254757 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0111251518297E3400254757 /* Enemy UnknownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enemy UnknownTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0111251618297E3400254757 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0111251E18297E3400254757 /* Enemy UnknownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Enemy UnknownTests-Info.plist"; sourceTree = "<group>"; };
-		0111252018297E3400254757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0111252218297E3400254757 /* Enemy_UnknownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy_UnknownTests.m; sourceTree = "<group>"; };
 		0111252C182981EE00254757 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0111252E18298AE800254757 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0111253C18299A5200254757 /* TrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrailerViewController.h; path = Controllers/TrailerViewController.h; sourceTree = "<group>"; };
@@ -76,19 +55,8 @@
 				0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */,
 				0111252D182981EE00254757 /* GameKit.framework in Frameworks */,
 				011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */,
-				010B67851829CB58005C9B4B /* StoreKit.framework in Frameworks */,
 				011124F918297E3400254757 /* UIKit.framework in Frameworks */,
 				011124F518297E3300254757 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0111251218297E3400254757 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0111251718297E3400254757 /* XCTest.framework in Frameworks */,
-				0111251918297E3400254757 /* UIKit.framework in Frameworks */,
-				0111251818297E3400254757 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				011124FA18297E3400254757 /* Enemy Unknown */,
-				0111251C18297E3400254757 /* Enemy UnknownTests */,
 				011124F318297E3300254757 /* Frameworks */,
 				011124F218297E3300254757 /* Products */,
 			);
@@ -109,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				011124F118297E3300254757 /* Enemy Unknown.app */,
-				0111251518297E3400254757 /* Enemy UnknownTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +83,6 @@
 		011124F318297E3300254757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				010B67841829CB58005C9B4B /* StoreKit.framework */,
 				0111252E18298AE800254757 /* MediaPlayer.framework */,
 				0111252C182981EE00254757 /* GameKit.framework */,
 				011124F418297E3300254757 /* Foundation.framework */,
@@ -133,10 +98,10 @@
 			children = (
 				011125361829974200254757 /* Resources */,
 				0111253318298B6500254757 /* Controllers */,
-				0111250C18297E3400254757 /* Enemy_UnknownViewController.h */,
-				0111250D18297E3400254757 /* Enemy_UnknownViewController.m */,
-				0111250318297E3400254757 /* Enemy_UnknownAppDelegate.h */,
-				0111250418297E3400254757 /* Enemy_UnknownAppDelegate.m */,
+				0111250C18297E3400254757 /* EnemyUnknownViewController.h */,
+				0111250D18297E3400254757 /* EnemyUnknownViewController.m */,
+				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
+				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
 				0111250F18297E3400254757 /* Images.xcassets */,
@@ -152,24 +117,6 @@
 				011124FD18297E3400254757 /* InfoPlist.strings */,
 				0111250018297E3400254757 /* main.m */,
 				0111250218297E3400254757 /* Enemy Unknown-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0111251C18297E3400254757 /* Enemy UnknownTests */ = {
-			isa = PBXGroup;
-			children = (
-				0111252218297E3400254757 /* Enemy_UnknownTests.m */,
-				0111251D18297E3400254757 /* Supporting Files */,
-			);
-			path = "Enemy UnknownTests";
-			sourceTree = "<group>";
-		};
-		0111251D18297E3400254757 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0111251E18297E3400254757 /* Enemy UnknownTests-Info.plist */,
-				0111251F18297E3400254757 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,24 +166,6 @@
 			productReference = 011124F118297E3300254757 /* Enemy Unknown.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0111251418297E3400254757 /* Enemy UnknownTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0111252918297E3400254757 /* Build configuration list for PBXNativeTarget "Enemy UnknownTests" */;
-			buildPhases = (
-				0111251118297E3400254757 /* Sources */,
-				0111251218297E3400254757 /* Frameworks */,
-				0111251318297E3400254757 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0111251B18297E3400254757 /* PBXTargetDependency */,
-			);
-			name = "Enemy UnknownTests";
-			productName = "Enemy UnknownTests";
-			productReference = 0111251518297E3400254757 /* Enemy UnknownTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,19 +175,6 @@
 				CLASSPREFIX = "Enemy Unknown";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Comp 446";
-				TargetAttributes = {
-					011124F018297E3300254757 = {
-						DevelopmentTeam = 426XA75MF6;
-						SystemCapabilities = {
-							com.apple.InAppPurchase = {
-								enabled = 1;
-							};
-						};
-					};
-					0111251418297E3400254757 = {
-						TestTargetID = 011124F018297E3300254757;
-					};
-				};
 			};
 			buildConfigurationList = 011124EC18297E3300254757 /* Build configuration list for PBXProject "Enemy Unknown" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -274,7 +190,6 @@
 			projectRoot = "";
 			targets = (
 				011124F018297E3300254757 /* Enemy Unknown */,
-				0111251418297E3400254757 /* Enemy UnknownTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,14 +207,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0111251318297E3400254757 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0111252118297E3400254757 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,30 +214,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0111250518297E3400254757 /* Enemy_UnknownAppDelegate.m in Sources */,
+				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				0111250118297E3400254757 /* main.m in Sources */,
-				0111250E18297E3400254757 /* Enemy_UnknownViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0111251118297E3400254757 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0111252318297E3400254757 /* Enemy_UnknownTests.m in Sources */,
+				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0111251B18297E3400254757 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 011124F018297E3300254757 /* Enemy Unknown */;
-			targetProxy = 0111251A18297E3400254757 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		011124FD18297E3400254757 /* InfoPlist.strings */ = {
@@ -355,14 +246,6 @@
 				0111250A18297E3400254757 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		0111251F18297E3400254757 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0111252018297E3400254757 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -468,48 +351,6 @@
 			};
 			name = Release;
 		};
-		0111252A18297E3400254757 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Enemy Unknown.app/Enemy Unknown";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Enemy Unknown/Enemy Unknown-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Enemy UnknownTests/Enemy UnknownTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		0111252B18297E3400254757 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Enemy Unknown.app/Enemy Unknown";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Enemy Unknown/Enemy Unknown-Prefix.pch";
-				INFOPLIST_FILE = "Enemy UnknownTests/Enemy UnknownTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,15 +368,6 @@
 			buildConfigurations = (
 				0111252718297E3400254757 /* Debug */,
 				0111252818297E3400254757 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0111252918297E3400254757 /* Build configuration list for PBXNativeTarget "Enemy UnknownTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0111252A18297E3400254757 /* Debug */,
-				0111252B18297E3400254757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
