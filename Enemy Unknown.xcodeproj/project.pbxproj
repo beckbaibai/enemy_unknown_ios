@@ -23,6 +23,7 @@
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
 		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
 		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
+		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		011125451829A4F100254757 /* demo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.m4v; path = Videos/demo.m4v; sourceTree = "<group>"; };
 		013B07BA182ACEF300E76CBF /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWebViewController.h; path = Controllers/GameWebViewController.h; sourceTree = "<group>"; };
 		013B07BB182ACEF300E76CBF /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameWebViewController.m; path = Controllers/GameWebViewController.m; sourceTree = "<group>"; };
+		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
+		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				011125361829974200254757 /* Resources */,
+				8C94DA2B182AD57F004F8D22 /* Categories */,
 				0111253318298B6500254757 /* Controllers */,
 				0111250C18297E3400254757 /* EnemyUnknownViewController.h */,
 				0111250D18297E3400254757 /* EnemyUnknownViewController.m */,
-				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
-				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
-				0111250F18297E3400254757 /* Images.xcassets */,
 				011124FB18297E3400254757 /* Supporting Files */,
 			);
 			path = "Enemy Unknown";
@@ -119,6 +120,9 @@
 		011124FB18297E3400254757 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
+				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
+				0111250F18297E3400254757 /* Images.xcassets */,
 				011124FC18297E3400254757 /* Enemy Unknown-Info.plist */,
 				011124FD18297E3400254757 /* InfoPlist.strings */,
 				0111250018297E3400254757 /* main.m */,
@@ -154,6 +158,15 @@
 				011125451829A4F100254757 /* demo.m4v */,
 			);
 			name = Trailer;
+			sourceTree = "<group>";
+		};
+		8C94DA2B182AD57F004F8D22 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */,
+				8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */,
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */,
