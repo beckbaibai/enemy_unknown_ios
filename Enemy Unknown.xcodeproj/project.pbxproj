@@ -22,7 +22,7 @@
 		0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252E18298AE800254757 /* MediaPlayer.framework */; };
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
 		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
-		8C94DA2A182AA519004F8D22 /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA29182AA519004F8D22 /* GameWebViewController.m */; };
+		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,8 @@
 		0111253C18299A5200254757 /* TrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrailerViewController.h; path = Controllers/TrailerViewController.h; sourceTree = "<group>"; };
 		0111253D18299A5200254757 /* TrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrailerViewController.m; path = Controllers/TrailerViewController.m; sourceTree = "<group>"; };
 		011125451829A4F100254757 /* demo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.m4v; path = Videos/demo.m4v; sourceTree = "<group>"; };
-		8C94DA28182AA519004F8D22 /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWebViewController.h; sourceTree = "<group>"; };
-		8C94DA29182AA519004F8D22 /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWebViewController.m; sourceTree = "<group>"; };
+		013B07BA182ACEF300E76CBF /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWebViewController.h; path = Controllers/GameWebViewController.h; sourceTree = "<group>"; };
+		013B07BB182ACEF300E76CBF /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameWebViewController.m; path = Controllers/GameWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +130,8 @@
 		0111253318298B6500254757 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				013B07BA182ACEF300E76CBF /* GameWebViewController.h */,
+				013B07BB182ACEF300E76CBF /* GameWebViewController.m */,
 				0111253C18299A5200254757 /* TrailerViewController.h */,
 				0111253D18299A5200254757 /* TrailerViewController.m */,
 				010B67861829F77F005C9B4B /* NoAnimationModalSegue.h */,
@@ -222,10 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C94DA2A182AA519004F8D22 /* GameWebViewController.m in Sources */,
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */,
+				013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */,
 				0111250118297E3400254757 /* main.m in Sources */,
 				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
 			);

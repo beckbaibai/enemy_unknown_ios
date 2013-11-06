@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JqO-Aq-BVx" kind="custom" identifier="" customClass="NoAnimationModalSegue" id="oZT-ZL-FyT"/>
+                                    <segue destination="JqO-Aq-BVx" kind="push" identifier="" customClass="NoAnimationModalSegue" id="oZT-ZL-FyT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-vu-h3f">
@@ -35,7 +35,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dz0-Of-Ujb" kind="custom" customClass="NoAnimationModalSegue" id="nzX-Od-eVD"/>
+                                    <segue destination="Dz0-Of-Ujb" kind="push" customClass="NoAnimationModalSegue" id="nzX-Od-eVD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,7 +89,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <segue destination="T6I-BJ-pWp" kind="custom" customClass="NoAnimationModalSegue" id="Tlo-de-HTl"/>
+                        <segue destination="T6I-BJ-pWp" kind="custom" identifier="trailerToMenu" customClass="NoAnimationModalSegue" id="Tlo-de-HTl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aB-qH-CLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,7 +121,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SMb-AV-ZGK" kind="custom" customClass="NoAnimationModalSegue" id="z5X-Gs-4a4"/>
+                                    <segue destination="SMb-AV-ZGK" kind="push" customClass="NoAnimationModalSegue" id="z5X-Gs-4a4"/>
                                 </connections>
                             </button>
                         </subviews>
