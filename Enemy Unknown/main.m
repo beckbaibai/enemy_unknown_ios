@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Enemy_UnknownAppDelegate.h"
+#import "EnemyUnknownAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([Enemy_UnknownAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([EnemyUnknownAppDelegate class]));
     }
 }
