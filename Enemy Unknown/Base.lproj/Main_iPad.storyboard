@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="183"/>
+            <point key="canvasLocation" x="-1039" y="535"/>
         </scene>
         <!--View Controller - Game Center-->
         <scene sceneID="diD-nv-ORY">
@@ -89,7 +89,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="trailerToMenu" customClass="NoAnimationModalSegue" id="z1p-eK-gwZ"/>
+                        <segue destination="T6I-BJ-pWp" kind="custom" customClass="NoAnimationModalSegue" id="Tlo-de-HTl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aB-qH-CLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2285" y="183"/>
+            <point key="canvasLocation" x="-2745" y="567"/>
         </scene>
         <!--View Controller - Choose Scenario-->
         <scene sceneID="f5w-4Z-MDd">
@@ -181,7 +181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv3-z3-kWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1459" y="147"/>
+            <point key="canvasLocation" x="-2187" y="-325"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
