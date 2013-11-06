@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Enemy_UnknownAppDelegate : UIResponder <UIApplicationDelegate>
+@interface EnemyUnknownAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

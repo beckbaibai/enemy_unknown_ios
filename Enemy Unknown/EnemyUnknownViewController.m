@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Comp 446. All rights reserved.
 //
 
-#import "Enemy_UnknownViewController.h"
+#import "EnemyUnknownViewController.h"
 
-@interface Enemy_UnknownViewController ()
+@interface EnemyUnknownViewController ()
 
 @end
 
-@implementation Enemy_UnknownViewController
+@implementation EnemyUnknownViewController
 
 - (void)viewDidLoad
 {

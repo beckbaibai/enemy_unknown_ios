@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Comp 446. All rights reserved.
 //
 
-#import "Enemy_UnknownAppDelegate.h"
+#import "EnemyUnknownAppDelegate.h"
 
-@implementation Enemy_UnknownAppDelegate
+@implementation EnemyUnknownAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

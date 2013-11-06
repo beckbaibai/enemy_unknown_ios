@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Enemy_UnknownViewController : UIViewController
+@interface EnemyUnknownViewController : UIViewController
 
 @end
