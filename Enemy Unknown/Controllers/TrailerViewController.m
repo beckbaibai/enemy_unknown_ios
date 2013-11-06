@@ -23,18 +23,14 @@
 
 -(void)playMovie
 {
-    NSString *filepath   =    [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"m4v"];
-    NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"m4v"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
     MPMoviePlayerViewController *moviePlayerView = [[MPMoviePlayerViewController alloc] initWithContentURL:fileURL];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [moviePlayerView.view setFrame: self.view.bounds];
     moviePlayerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
     [self.view addSubview:moviePlayerView.view];
-    //[moviePlayerView.moviePlayer setFullscreen:YES];
-    
     [moviePlayerView.moviePlayer play];
-    //moviePlayerView.moviePlayer.fullscreen = YES;
-    
 }
 
 @end
