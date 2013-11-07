@@ -114,14 +114,13 @@
 			isa = PBXGroup;
 			children = (
 				011125361829974200254757 /* Resources */,
+				8C94DA2F182AF6EC004F8D22 /* SBJson */,
+				8C94DA2B182AD57F004F8D22 /* Categories */,
 				0111253318298B6500254757 /* Controllers */,
 				0111250C18297E3400254757 /* EnemyUnknownViewController.h */,
 				0111250D18297E3400254757 /* EnemyUnknownViewController.m */,
-				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
-				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
-				0111250F18297E3400254757 /* Images.xcassets */,
 				011124FB18297E3400254757 /* Supporting Files */,
 			);
 			path = "Enemy Unknown";
@@ -130,6 +129,9 @@
 		011124FB18297E3400254757 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
+				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
+				0111250F18297E3400254757 /* Images.xcassets */,
 				011124FC18297E3400254757 /* Enemy Unknown-Info.plist */,
 				011124FD18297E3400254757 /* InfoPlist.strings */,
 				0111250018297E3400254757 /* main.m */,
@@ -167,6 +169,47 @@
 				011125451829A4F100254757 /* demo.m4v */,
 			);
 			name = Trailer;
+			sourceTree = "<group>";
+		};
+		8C94DA2B182AD57F004F8D22 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */,
+				8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		8C94DA2F182AF6EC004F8D22 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA30182AF6EC004F8D22 /* NSObject+SBJson.h */,
+				8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */,
+				8C94DA32182AF6EC004F8D22 /* SBJson.h */,
+				8C94DA33182AF6EC004F8D22 /* SBJsonParser.h */,
+				8C94DA34182AF6EC004F8D22 /* SBJsonParser.m */,
+				8C94DA35182AF6EC004F8D22 /* SBJsonStreamParser.h */,
+				8C94DA36182AF6EC004F8D22 /* SBJsonStreamParser.m */,
+				8C94DA37182AF6EC004F8D22 /* SBJsonStreamParserAccumulator.h */,
+				8C94DA38182AF6EC004F8D22 /* SBJsonStreamParserAccumulator.m */,
+				8C94DA39182AF6EC004F8D22 /* SBJsonStreamParserAdapter.h */,
+				8C94DA3A182AF6EC004F8D22 /* SBJsonStreamParserAdapter.m */,
+				8C94DA3B182AF6EC004F8D22 /* SBJsonStreamParserState.h */,
+				8C94DA3C182AF6EC004F8D22 /* SBJsonStreamParserState.m */,
+				8C94DA3D182AF6EC004F8D22 /* SBJsonStreamWriter.h */,
+				8C94DA3E182AF6EC004F8D22 /* SBJsonStreamWriter.m */,
+				8C94DA3F182AF6EC004F8D22 /* SBJsonStreamWriterAccumulator.h */,
+				8C94DA40182AF6EC004F8D22 /* SBJsonStreamWriterAccumulator.m */,
+				8C94DA41182AF6EC004F8D22 /* SBJsonStreamWriterState.h */,
+				8C94DA42182AF6EC004F8D22 /* SBJsonStreamWriterState.m */,
+				8C94DA43182AF6EC004F8D22 /* SBJsonTokeniser.h */,
+				8C94DA44182AF6EC004F8D22 /* SBJsonTokeniser.m */,
+				8C94DA45182AF6EC004F8D22 /* SBJsonUTF8Stream.h */,
+				8C94DA46182AF6EC004F8D22 /* SBJsonUTF8Stream.m */,
+				8C94DA47182AF6EC004F8D22 /* SBJsonWriter.h */,
+				8C94DA48182AF6EC004F8D22 /* SBJsonWriter.m */,
+			);
+			path = SBJson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,13 +296,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C94DA52182AF6EC004F8D22 /* SBJsonTokeniser.m in Sources */,
+				8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */,
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
+				8C94DA4E182AF6EC004F8D22 /* SBJsonStreamParserState.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */,
 				013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */,
 				0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */,
 				0111250118297E3400254757 /* main.m in Sources */,
+				8C94DA4C182AF6EC004F8D22 /* SBJsonStreamParserAccumulator.m in Sources */,
+				8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */,
+				8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */,
+				8C94DA53182AF6EC004F8D22 /* SBJsonUTF8Stream.m in Sources */,
 				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
+				8C94DA50182AF6EC004F8D22 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				8C94DA4F182AF6EC004F8D22 /* SBJsonStreamWriter.m in Sources */,
+				8C94DA51182AF6EC004F8D22 /* SBJsonStreamWriterState.m in Sources */,
+				8C94DA4B182AF6EC004F8D22 /* SBJsonStreamParser.m in Sources */,
+				8C94DA4D182AF6EC004F8D22 /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
