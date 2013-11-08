@@ -23,7 +23,8 @@
 {
     [super viewDidLoad];
     
-	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
+	//NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
+    NSString *fullURL = @"http://10.118.194.90:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
@@ -43,7 +44,7 @@
 {
     [self.spinner stopAnimating];
     // Choose "slayer" scenario
-    [self.webView stringByEvaluatingJavaScriptFromString:@"mobileStartGame(\"slayer\");"];
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"mobileStartGame(\"%@\");",self.scenario]];
 }
 
 // Provide a way for Javascript code to call Objective-C method.

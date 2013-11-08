@@ -11,5 +11,5 @@
 @interface GameWebViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
-
+@property (nonatomic,retain) NSString *scenario;
 @end
