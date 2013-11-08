@@ -13,7 +13,6 @@
 @interface MainMenuViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
-@property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end
 
@@ -24,14 +23,14 @@
     [super loadView];
     
     // Use OLImage and OLImageView instead of default UIImage and UIImageView in order to show gif
-    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 96, 400, 125)];
+    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 150, 400, 125)];
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
     NSURL *fileURL = [NSURL fileURLWithPath:filepath];
     NSData *logoData = [NSData dataWithContentsOfURL:fileURL];
     assert(logoData!=nil);
     UIImage *logoImage = [OLImage imageWithData:logoData];
     self.logo.image = logoImage;
-    [self.mainView addSubview:self.logo];
+    [self.view addSubview:self.logo];
 }
 
 - (void)viewDidLoad

@@ -8,36 +8,59 @@
 
 #import "LobbyViewController.h"
 #import "GameWebViewController.h"
+#import "OLImage.h"
+#import "OLImageView.h"
 
 @interface LobbyViewController ()
 @property (strong,nonatomic) NSArray *scenarioArray;
 @property (nonatomic) NSString* scenarioSelected;
+@property (strong, nonatomic) IBOutlet UIImageView *logo;
 @end
 
 @implementation LobbyViewController
 
--(void)viewDidLoad{
-    [super viewDidLoad];
-    self.scenarioArray = [self scenarios];
+- (void)loadView
+{
+    [super loadView];
     
+    // Use OLImage and OLImageView instead of default UIImage and UIImageView in order to show gif
+    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 150, 400, 125)];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
+    NSData *logoData = [NSData dataWithContentsOfURL:fileURL];
+    assert(logoData!=nil);
+    UIImage *logoImage = [OLImage imageWithData:logoData];
+    self.logo.image = logoImage;
+    [self.view addSubview:self.logo];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.scenarioArray = [self scenarios];
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return [self.scenarioArray count];
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+-(NSString *)pickerView:(UIPickerView *)pickerView
+            titleForRow:(NSInteger)row
+           forComponent:(NSInteger)component
 {
     return [self.scenarioArray objectAtIndex:row];
 }
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
+
+- (void)pickerView:(UIPickerView *)pickerView
+      didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component
 {
     switch(row)
     {
@@ -66,7 +89,8 @@
     
 }
 
--(NSArray *) scenarios{
+-(NSArray *) scenarios
+{
     return [[NSArray alloc] initWithObjects:@"Slayer",@"Tutorial",@"Capture the Flag",@"Vampire Hunter",@"Zombie is King",@"Rock Paper Sissors",@"War zone", nil];
 }
 
