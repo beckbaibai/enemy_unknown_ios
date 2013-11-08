@@ -153,6 +153,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-Pd-egJ">
+                                <rect key="frame" x="502" y="375" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnU-Ku-ltT">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,6 +171,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HHm-aW-CCj"/>
                     <connections>
+                        <outlet property="spinner" destination="BgC-Pd-egJ" id="T8X-Kh-opK"/>
                         <outlet property="webView" destination="rnU-Ku-ltT" id="Llf-9D-hNg"/>
                     </connections>
                 </viewController>
