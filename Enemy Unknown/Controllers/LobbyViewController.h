@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 
-@interface LobbyViewController : UIViewController
+@interface LobbyViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet ADBannerView *adView;
+@property (strong, nonatomic) IBOutlet UIPickerView *scenario;
 
 @end
