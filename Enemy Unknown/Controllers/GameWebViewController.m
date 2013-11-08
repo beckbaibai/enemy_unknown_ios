@@ -13,6 +13,7 @@
 @interface GameWebViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) SBJsonParser *json;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -28,11 +29,20 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
     
+    self.webView.scrollView.bounces = NO;
+    
     self.json = [[SBJsonParser alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.spinner startAnimating];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [self.spinner stopAnimating];
     // Choose "slayer" scenario
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"mobileStartGame(\"%@\");",self.scenario]];
 }
