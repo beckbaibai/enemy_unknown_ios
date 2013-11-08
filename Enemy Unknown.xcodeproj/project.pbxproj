@@ -22,6 +22,10 @@
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
 		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
 		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
+		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; };
+		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
+		01466299182C2198005E6162 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01466298182C2198005E6162 /* iAd.framework */; };
+		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
 		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
 		8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA34182AF6EC004F8D22 /* SBJsonParser.m */; };
@@ -35,10 +39,11 @@
 		8C94DA52182AF6EC004F8D22 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA44182AF6EC004F8D22 /* SBJsonTokeniser.m */; };
 		8C94DA53182AF6EC004F8D22 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA46182AF6EC004F8D22 /* SBJsonUTF8Stream.m */; };
 		8C94DA54182AF6EC004F8D22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA48182AF6EC004F8D22 /* SBJsonWriter.m */; };
-		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; };
-		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
-		01466299182C2198005E6162 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01466298182C2198005E6162 /* iAd.framework */; };
-		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
+		8C94DA59182C7BE0004F8D22 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA58182C7BE0004F8D22 /* MainMenuViewController.m */; };
+		8C94DA5E182C7C3C004F8D22 /* OLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA5B182C7C3C004F8D22 /* OLImage.m */; };
+		8C94DA5F182C7C3C004F8D22 /* OLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA5D182C7C3C004F8D22 /* OLImageView.m */; };
+		8C94DA64182C8187004F8D22 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */; };
+		8C94DA68182C8324004F8D22 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C94DA67182C8324004F8D22 /* logo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		011125451829A4F100254757 /* demo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.m4v; path = Videos/demo.m4v; sourceTree = "<group>"; };
 		013B07BA182ACEF300E76CBF /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWebViewController.h; path = Controllers/GameWebViewController.h; sourceTree = "<group>"; };
 		013B07BB182ACEF300E76CBF /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameWebViewController.m; path = Controllers/GameWebViewController.m; sourceTree = "<group>"; };
+		014039B7182C39A200FEA379 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		014039B9182C3A1C00FEA379 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		01466298182C2198005E6162 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0146629A182C2C7E005E6162 /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyViewController.h; path = Controllers/LobbyViewController.h; sourceTree = "<group>"; };
+		0146629B182C2C7E005E6162 /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LobbyViewController.m; path = Controllers/LobbyViewController.m; sourceTree = "<group>"; };
 		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
 		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
 		8C94DA30182AF6EC004F8D22 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -93,11 +103,14 @@
 		8C94DA46182AF6EC004F8D22 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		8C94DA47182AF6EC004F8D22 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		8C94DA48182AF6EC004F8D22 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		014039B7182C39A200FEA379 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		014039B9182C3A1C00FEA379 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		01466298182C2198005E6162 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		0146629A182C2C7E005E6162 /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyViewController.h; path = Controllers/LobbyViewController.h; sourceTree = "<group>"; };
-		0146629B182C2C7E005E6162 /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LobbyViewController.m; path = Controllers/LobbyViewController.m; sourceTree = "<group>"; };
+		8C94DA57182C7BE0004F8D22 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		8C94DA58182C7BE0004F8D22 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		8C94DA5A182C7C3C004F8D22 /* OLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLImage.h; sourceTree = "<group>"; };
+		8C94DA5B182C7C3C004F8D22 /* OLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImage.m; sourceTree = "<group>"; };
+		8C94DA5C182C7C3C004F8D22 /* OLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLImageView.h; sourceTree = "<group>"; };
+		8C94DA5D182C7C3C004F8D22 /* OLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImageView.m; sourceTree = "<group>"; };
+		8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8C94DA67182C8324004F8D22 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = ../logo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C94DA64182C8187004F8D22 /* MobileCoreServices.framework in Frameworks */,
 				01466299182C2198005E6162 /* iAd.framework in Frameworks */,
 				0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */,
 				014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */,
@@ -138,6 +152,7 @@
 		011124F318297E3300254757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */,
 				014039B9182C3A1C00FEA379 /* GameKit.framework */,
 				014039B7182C39A200FEA379 /* StoreKit.framework */,
 				01466298182C2198005E6162 /* iAd.framework */,
@@ -154,13 +169,13 @@
 			isa = PBXGroup;
 			children = (
 				011125361829974200254757 /* Resources */,
-				8C94DA2F182AF6EC004F8D22 /* SBJson */,
 				8C94DA2B182AD57F004F8D22 /* Categories */,
 				0111253318298B6500254757 /* Controllers */,
 				0111250C18297E3400254757 /* EnemyUnknownViewController.h */,
 				0111250D18297E3400254757 /* EnemyUnknownViewController.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
+				8C94DA55182C7A1D004F8D22 /* Libraries */,
 				011124FB18297E3400254757 /* Supporting Files */,
 			);
 			path = "Enemy Unknown";
@@ -191,6 +206,8 @@
 				0111253D18299A5200254757 /* TrailerViewController.m */,
 				010B67861829F77F005C9B4B /* NoAnimationModalSegue.h */,
 				010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */,
+				8C94DA57182C7BE0004F8D22 /* MainMenuViewController.h */,
+				8C94DA58182C7BE0004F8D22 /* MainMenuViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 		011125361829974200254757 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C94DA62182C7F61004F8D22 /* gifs */,
 				011125371829974900254757 /* Trailer */,
 			);
 			name = Resources;
@@ -250,6 +268,34 @@
 				8C94DA48182AF6EC004F8D22 /* SBJsonWriter.m */,
 			);
 			path = SBJson;
+			sourceTree = "<group>";
+		};
+		8C94DA55182C7A1D004F8D22 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA56182C7A35004F8D22 /* OLImage */,
+				8C94DA2F182AF6EC004F8D22 /* SBJson */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8C94DA56182C7A35004F8D22 /* OLImage */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA5A182C7C3C004F8D22 /* OLImage.h */,
+				8C94DA5B182C7C3C004F8D22 /* OLImage.m */,
+				8C94DA5C182C7C3C004F8D22 /* OLImageView.h */,
+				8C94DA5D182C7C3C004F8D22 /* OLImageView.m */,
+			);
+			name = OLImage;
+			sourceTree = "<group>";
+		};
+		8C94DA62182C7F61004F8D22 /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				8C94DA67182C8324004F8D22 /* logo.gif */,
+			);
+			name = gifs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
+				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
 				011125461829A4F100254757 /* demo.m4v in Resources */,
 				0111251018297E3400254757 /* Images.xcassets in Resources */,
 				0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */,
@@ -349,12 +396,15 @@
 				8C94DA4C182AF6EC004F8D22 /* SBJsonStreamParserAccumulator.m in Sources */,
 				8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */,
 				8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */,
+				8C94DA59182C7BE0004F8D22 /* MainMenuViewController.m in Sources */,
 				8C94DA53182AF6EC004F8D22 /* SBJsonUTF8Stream.m in Sources */,
 				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
+				8C94DA5F182C7C3C004F8D22 /* OLImageView.m in Sources */,
 				8C94DA50182AF6EC004F8D22 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				8C94DA4F182AF6EC004F8D22 /* SBJsonStreamWriter.m in Sources */,
 				8C94DA51182AF6EC004F8D22 /* SBJsonStreamWriterState.m in Sources */,
 				8C94DA4B182AF6EC004F8D22 /* SBJsonStreamParser.m in Sources */,
+				8C94DA5E182C7C3C004F8D22 /* OLImage.m in Sources */,
 				8C94DA4D182AF6EC004F8D22 /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
