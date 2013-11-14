@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dz0-Of-Ujb" kind="push" customClass="NoAnimationModalSegue" id="nzX-Od-eVD"/>
+                                    <action selector="gameCenterOpen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDR-7c-KxI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,27 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="115"/>
-        </scene>
-        <!--View Controller - Game Center-->
-        <scene sceneID="diD-nv-ORY">
-            <objects>
-                <viewController title="Game Center" id="Dz0-Of-Ujb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j45-4I-cYQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="TU4-d3-RNo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="30t-ES-YFk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="JSj-Ny-EfM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CPG-4g-UF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="864" y="470"/>
+            <point key="canvasLocation" x="-751" y="131"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="8oV-eC-LMA">

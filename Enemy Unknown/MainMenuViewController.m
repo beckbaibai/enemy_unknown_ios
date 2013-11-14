@@ -33,9 +33,15 @@
     [self.view addSubview:self.logo];
 }
 
+- (IBAction)gameCenterOpen:(UIButton *)sender {
+    [self showGameCenter];
+    [self reportScore:10];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self authenticateLocalPlayer];
 	// Do any additional setup after loading the view.
 }
 
@@ -43,6 +49,54 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) authenticateLocalPlayer
+{
+        GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+        __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
+        localPlayer.authenticateHandler = ^(UIViewController *receivedViewController, NSError *error){
+            if (receivedViewController != nil)
+            {
+                [self presentViewController:receivedViewController animated:YES completion:nil];
+            }
+            else if (blockLocalPlayer.isAuthenticated)
+            {
+                 NSLog(@"Game center now available");
+            }
+            else
+            {
+                NSLog(@"Game center not available");
+            }
+        };
+
+}
+
+- (void)showGameCenter
+{
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    if (gameCenterController != nil)
+    {
+        gameCenterController.gameCenterDelegate = self;
+        gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
+        [self presentViewController: gameCenterController animated: YES completion:nil];
+    }
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)reportScore:(int64_t)score
+{
+    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: @"EnemyUnknownWins"];
+    scoreReporter.value = score;
+    scoreReporter.context = 0;
+    
+    NSArray *scores = @[scoreReporter];
+    [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
+    }];
 }
 
 @end
