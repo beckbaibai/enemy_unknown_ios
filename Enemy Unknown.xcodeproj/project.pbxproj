@@ -329,7 +329,7 @@
 				ORGANIZATIONNAME = "Comp 446";
 				TargetAttributes = {
 					011124F018297E3300254757 = {
-						DevelopmentTeam = 426XA75MF6;
+						DevelopmentTeam = 3562NZ28A9;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -524,7 +524,7 @@
 				GCC_PREFIX_HEADER = "Enemy Unknown/Enemy Unknown-Prefix.pch";
 				INFOPLIST_FILE = "Enemy Unknown/Enemy Unknown-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4B5E08C8-E55B-43C8-A7B2-2822EE91CDA9";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -540,7 +540,7 @@
 				GCC_PREFIX_HEADER = "Enemy Unknown/Enemy Unknown-Prefix.pch";
 				INFOPLIST_FILE = "Enemy Unknown/Enemy Unknown-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4B5E08C8-E55B-43C8-A7B2-2822EE91CDA9";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
