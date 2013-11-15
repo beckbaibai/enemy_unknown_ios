@@ -58,36 +58,6 @@
     return [self.scenarioArray objectAtIndex:row];
 }
 
-- (void)pickerView:(UIPickerView *)pickerView
-      didSelectRow:(NSInteger)row
-       inComponent:(NSInteger)component
-{
-    switch(row)
-    {
-        case 0:
-            self.scenarioSelected = @"slayer";
-            break;
-        case 1:
-            self.scenarioSelected = @"tutorial_1";
-            break;
-        case 2:
-            self.scenarioSelected = @"captureflag";
-            break;
-        case 3:
-            self.scenarioSelected = @"vampirehunter";
-            break;
-        case 4:
-            self.scenarioSelected = @"zombieisbetter";
-            break;
-        case 5:
-            self.scenarioSelected = @"rockpapersissors";
-            break;
-        case 6:
-            self.scenarioSelected = @"warzone";
-            break;
-    }
-    
-}
 
 -(NSArray *) scenarios
 {
@@ -98,8 +68,38 @@
 {
     if ([[segue identifier] isEqualToString:@"Start Game"])
     {
+        NSInteger row = [self.scenario selectedRowInComponent:0];
+        switch(row)
+        {
+            case 0:
+                self.scenarioSelected = @"slayer";
+                break;
+            case 1:
+                self.scenarioSelected = @"tutorial_1";
+                break;
+            case 2:
+                self.scenarioSelected = @"captureflag";
+                break;
+            case 3:
+                self.scenarioSelected = @"vampirehunter";
+                break;
+            case 4:
+                self.scenarioSelected = @"zombieisbetter";
+                break;
+            case 5:
+                self.scenarioSelected = @"rockpapersissors";
+                break;
+            case 6:
+                self.scenarioSelected = @"warzone";
+                break;
+            default:
+                self.scenarioSelected = @"slayer";
+                break;
+                
+        }
         GameWebViewController *vc = [segue destinationViewController];
         [vc setScenario:self.scenarioSelected];
+        NSLog(@"%@",self.scenarioSelected);
     }
 }
 

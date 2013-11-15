@@ -35,7 +35,8 @@
 
 - (IBAction)gameCenterOpen:(UIButton *)sender {
     [self showGameCenter];
-    [self reportScore:10];
+    [self reportScore:10 forLeaderboardID:@"EnemyUnknownWins"];
+    [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
 }
 
 - (void)viewDidLoad
@@ -88,15 +89,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)reportScore:(int64_t)score
+- (void)reportScore:(int64_t)score forLeaderboardID: (NSString*) identifier
 {
-    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: @"EnemyUnknownWins"];
+    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: identifier];
     scoreReporter.value = score;
     scoreReporter.context = 0;
     
     NSArray *scores = @[scoreReporter];
     [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
     }];
+}
+
+- (void) reportAchievement: (NSString*) identifier percentComplete: (float) percent
+{
+    GKAchievement *achievement = [[GKAchievement alloc] initWithIdentifier: identifier];
+    if (achievement)
+    {
+        achievement.percentComplete = percent;
+        NSArray *achievements = @[achievement];
+        [GKAchievement reportAchievements:achievements withCompletionHandler:^(NSError *error){
+         }];
+    }
 }
 
 @end

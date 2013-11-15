@@ -23,8 +23,8 @@
 {
     [super viewDidLoad];
     
-	//NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
-    NSString *fullURL = @"http://10.118.194.90:4004";
+	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
+    //NSString *fullURL = @"http://10.118.194.90:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
