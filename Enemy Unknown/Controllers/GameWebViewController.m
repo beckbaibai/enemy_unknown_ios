@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.webView.scrollView setDelaysContentTouches:NO];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
     //NSString *fullURL = @"http://192.168.52.1:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
