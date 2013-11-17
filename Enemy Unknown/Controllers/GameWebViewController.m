@@ -14,7 +14,7 @@
 @interface GameWebViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) SBJsonParser *json;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UIImageView *loadingImageView;
 
 @end
 
@@ -27,7 +27,7 @@
     [appDelegate.musicPlayer.menuPlayer pause];
     [self.webView.scrollView setDelaysContentTouches:NO];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
-    //NSString *fullURL = @"http://10.118.194.90:4004";
+    //NSString *fullURL = @"http://192.168.52.1:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
@@ -40,12 +40,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.spinner startAnimating];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.spinner stopAnimating];
     // Choose "slayer" scenario
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"mobileStartGame(\"%@\");",self.scenario]];
 }
@@ -83,14 +81,25 @@
         if ([args count] != 1)
             NSLog(@"endGame takes exactly 1 argument!");
         NSLog(@"endGame called successfully!");
+        // TODO
         
     } else if ([functionName isEqualToString:@"alert"]) {
         
         NSLog(@"WENGWENGWENG!!");
         
+    } else if ([functionName isEqualToString:@"hasFinishedLoading"]) {
+        
+        NSLog(@"hasFinishedLoading called");
+        [self hasFinishedLoading];
+    
     } else {
         NSLog(@"Unimplemented method '%@'", functionName);
     }
+}
+
+- (void)hasFinishedLoading
+{
+    [self.loadingImageView setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning

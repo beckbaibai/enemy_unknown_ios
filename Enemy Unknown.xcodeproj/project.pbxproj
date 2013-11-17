@@ -30,6 +30,7 @@
 		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
 		01466299182C2198005E6162 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01466298182C2198005E6162 /* iAd.framework */; };
 		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
+		8C258152183959A2001D56B9 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C258151183959A2001D56B9 /* loading.jpg */; };
 		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
 		8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA34182AF6EC004F8D22 /* SBJsonParser.m */; };
@@ -85,6 +86,7 @@
 		01466298182C2198005E6162 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0146629A182C2C7E005E6162 /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyViewController.h; path = Controllers/LobbyViewController.h; sourceTree = "<group>"; };
 		0146629B182C2C7E005E6162 /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LobbyViewController.m; path = Controllers/LobbyViewController.m; sourceTree = "<group>"; };
+		8C258151183959A2001D56B9 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loading.jpg; path = ../loading.jpg; sourceTree = "<group>"; };
 		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
 		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
 		8C94DA30182AF6EC004F8D22 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		011125361829974200254757 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C258151183959A2001D56B9 /* loading.jpg */,
 				011D6FD71836974200463BBF /* Sounds */,
 				8C94DA62182C7F61004F8D22 /* gifs */,
 				011125371829974900254757 /* Trailer */,
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
 				011D6FDA183697CC00463BBF /* menu.mp3 in Resources */,
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
 				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
