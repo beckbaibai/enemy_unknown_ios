@@ -9,6 +9,7 @@
 #import "GameWebViewController.h"
 #import "UIWebView+EUAdditions.h"
 #import "SBJson.h"
+#import "EnemyUnknownAppDelegate.h"
 
 @interface GameWebViewController () <UIWebViewDelegate>
 
@@ -22,6 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer pause];
     [self.webView.scrollView setDelaysContentTouches:NO];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
     //NSString *fullURL = @"http://10.118.194.90:4004";

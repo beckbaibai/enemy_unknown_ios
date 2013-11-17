@@ -9,6 +9,8 @@
 #import "MainMenuViewController.h"
 #import "OLImage.h"
 #import "OLImageView.h"
+#import "EnemyUnknownAppDelegate.h"
+#import "MusicController.h"
 
 @interface MainMenuViewController ()
 
@@ -44,6 +46,11 @@
     [super viewDidLoad];
     [self authenticateLocalPlayer];
 	// Do any additional setup after loading the view.
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MusicController *musicPlayer = [MusicController alloc];
+    appDelegate.musicPlayer = musicPlayer;
+    [appDelegate.musicPlayer initMenuPlayer];
+    [appDelegate.musicPlayer.menuPlayer play];
 }
 
 - (void)didReceiveMemoryWarning

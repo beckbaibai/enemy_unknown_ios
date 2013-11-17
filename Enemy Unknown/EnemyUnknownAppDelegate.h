@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MusicController.h"
 
 @interface EnemyUnknownAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong,nonatomic) MusicController *musicPlayer;
 @end

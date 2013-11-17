@@ -9,5 +9,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface MusicController : NSObject
-
+@property (strong,nonatomic) AVAudioPlayer *menuPlayer;
+-(void)initMenuPlayer;
 @end

@@ -24,7 +24,7 @@
 		011D6FD21836955A00463BBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD11836955A00463BBF /* AVFoundation.framework */; };
 		011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD31836962900463BBF /* AudioToolbox.framework */; };
 		011D6FDA183697CC00463BBF /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 011D6FD51836972E00463BBF /* menu.mp3 */; };
-		011D6FDD1836987100463BBF /* MusicPController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011D6FDC1836987100463BBF /* MusicPController.m */; };
+		011D6FDD1836987100463BBF /* MusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011D6FDC1836987100463BBF /* MusicController.m */; };
 		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
 		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; };
 		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
@@ -77,7 +77,7 @@
 		011D6FD31836962900463BBF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		011D6FD51836972E00463BBF /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../menu.mp3; sourceTree = "<group>"; };
 		011D6FDB1836987100463BBF /* MusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicController.h; path = Model/MusicController.h; sourceTree = "<group>"; };
-		011D6FDC1836987100463BBF /* MusicPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicPController.m; path = Model/MusicPController.m; sourceTree = "<group>"; };
+		011D6FDC1836987100463BBF /* MusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicController.m; path = Model/MusicController.m; sourceTree = "<group>"; };
 		013B07BA182ACEF300E76CBF /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWebViewController.h; path = Controllers/GameWebViewController.h; sourceTree = "<group>"; };
 		013B07BB182ACEF300E76CBF /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameWebViewController.m; path = Controllers/GameWebViewController.m; sourceTree = "<group>"; };
 		014039B7182C39A200FEA379 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -256,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				011D6FDB1836987100463BBF /* MusicController.h */,
-				011D6FDC1836987100463BBF /* MusicPController.m */,
+				011D6FDC1836987100463BBF /* MusicController.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -430,7 +430,7 @@
 				8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */,
 				8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */,
 				8C94DA59182C7BE0004F8D22 /* MainMenuViewController.m in Sources */,
-				011D6FDD1836987100463BBF /* MusicPController.m in Sources */,
+				011D6FDD1836987100463BBF /* MusicController.m in Sources */,
 				8C94DA53182AF6EC004F8D22 /* SBJsonUTF8Stream.m in Sources */,
 				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
 				8C94DA5F182C7C3C004F8D22 /* OLImageView.m in Sources */,
