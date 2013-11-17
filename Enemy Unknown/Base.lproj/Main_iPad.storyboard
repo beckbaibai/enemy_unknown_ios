@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Main Menu View Controller - Game Menu-->
@@ -210,23 +210,23 @@
                                     <outlet property="delegate" destination="SMb-AV-ZGK" id="hEd-nJ-K5x"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-Pd-egJ">
-                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loading.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-S0-pf5">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="HHm-aW-CCj"/>
                     <connections>
-                        <outlet property="spinner" destination="BgC-Pd-egJ" id="T8X-Kh-opK"/>
+                        <outlet property="loadingImageView" destination="PEX-S0-pf5" id="ecj-ga-X61"/>
                         <outlet property="webView" destination="rnU-Ku-ltT" id="Llf-9D-hNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ls3-7m-0zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="-420"/>
+            <point key="canvasLocation" x="2000" y="-420"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pq7-Q1-ubJ">
@@ -248,6 +248,9 @@
             <point key="canvasLocation" x="-2039" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loading.jpg" width="1900" height="1200"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>
