@@ -58,6 +58,19 @@
     return [self.scenarioArray objectAtIndex:row];
 }
 
+- (UIView *)pickerView:(UIPickerView *)pickerView
+            viewForRow:(NSInteger)row
+          forComponent:(NSInteger)component
+           reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+    label.backgroundColor = [UIColor blackColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"Copperplate" size:20];
+    label.text = [self.scenarioArray objectAtIndex:row];
+    label.textAlignment = NSTextAlignmentCenter;
+    return label;
+}
 
 -(NSArray *) scenarios
 {
