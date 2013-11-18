@@ -24,7 +24,9 @@
 {
     [super viewDidLoad];
 
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [self.webView.scrollView setDelaysContentTouches:NO];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document. body.style.zoom = 5.0;"];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
     //NSString *fullURL = @"http://192.168.52.1:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
@@ -35,11 +37,19 @@
     
     self.json = [[SBJsonParser alloc] init];
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer pause];
 //    // Delay execution of my block for 10 seconds.
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
 //        appDelegate.musicPlayer.menuPlayer.volume = 0.8;
 //    });
-//    [appDelegate.musicPlayer.menuPlayer pause];
+    self.webView.bounds = CGRectMake(0, 0, 600, 800);
+    CGRect frame = self.view.frame;
+    CGSize correctSize;
+    correctSize.width = MAX(frame.size.width, frame.size.height);
+    correctSize.height = MIN(frame.size.width, frame.size.height);
+    frame.size = correctSize;
+    float scaleFactor = frame.size.width / 800;
+    self.webView.transform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
 }
 
 - (void)viewWillAppear:(BOOL)animated

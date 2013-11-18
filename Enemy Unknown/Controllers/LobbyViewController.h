@@ -12,5 +12,6 @@
 @interface LobbyViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet ADBannerView *adView;
 @property (strong, nonatomic) IBOutlet UIPickerView *scenario;
+@property (nonatomic) bool hasAds;
 
 @end

@@ -10,6 +10,7 @@
 #import "GameWebViewController.h"
 #import "OLImage.h"
 #import "OLImageView.h"
+#import "EnemyUnknownAppDelegate.h"
 
 @interface LobbyViewController ()
 @property (strong,nonatomic) NSArray *scenarioArray;
@@ -18,6 +19,10 @@
 @end
 
 @implementation LobbyViewController
+
+- (IBAction)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)loadView
 {
@@ -39,6 +44,8 @@
     [super viewDidLoad];
     
     self.scenarioArray = [self scenarios];
+    self.hasAds = YES;
+    self.adView.hidden = YES;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -114,6 +121,33 @@
         [vc setScenario:self.scenarioSelected];
         NSLog(@"%@",self.scenarioSelected);
     }
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if(self.hasAds){
+        self.adView.hidden = NO;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    self.adView.hidden = YES;
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer pause];
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer play];
+    self.hasAds = NO;
+    self.adView.hidden = YES;
 }
 
 @end
