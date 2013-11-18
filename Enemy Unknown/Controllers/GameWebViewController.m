@@ -23,8 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate.musicPlayer.menuPlayer pause];
+
     [self.webView.scrollView setDelaysContentTouches:NO];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
     //NSString *fullURL = @"http://192.168.52.1:4004";
@@ -35,6 +34,12 @@
     self.webView.scrollView.bounces = NO;
     
     self.json = [[SBJsonParser alloc] init];
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    // Delay execution of my block for 10 seconds.
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+//        appDelegate.musicPlayer.menuPlayer.volume = 0.8;
+//    });
+//    [appDelegate.musicPlayer.menuPlayer pause];
 }
 
 - (void)viewWillAppear:(BOOL)animated
