@@ -10,9 +10,10 @@
 #import "UIWebView+EUAdditions.h"
 #import "SBJson.h"
 #import "EnemyUnknownAppDelegate.h"
+#import "EndGameViewController.h"
 
 @interface GameWebViewController () <UIWebViewDelegate>
-
+@property (nonatomic) BOOL iWon;
 @property (strong, nonatomic) SBJsonParser *json;
 @property (weak, nonatomic) IBOutlet UIImageView *loadingImageView;
 
@@ -52,10 +53,6 @@
     self.webView.transform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
@@ -99,7 +96,6 @@
         // TODO
         
     } else if ([functionName isEqualToString:@"alert"]) {
-        
         NSLog(@"WENGWENGWENG!!");
         
     } else if ([functionName isEqualToString:@"hasFinishedLoading"]) {
@@ -117,10 +113,19 @@
     [self.loadingImageView setHidden:YES];
 }
 
-- (void)didReceiveMemoryWarning
+
+-(void)gameWon:(BOOL) iWon
 {
-    [super didReceiveMemoryWarning];
-    // TODO: Dispose of any resources that can be recreated.
+    self.iWon = iWon;
+    [self performSegueWithIdentifier: @"End Game"
+                              sender: self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"End Game"]){
+        EndGameViewController *vc = [segue destinationViewController];
+        [vc setIWon:self.iWon];
+    }
 }
 
 @end

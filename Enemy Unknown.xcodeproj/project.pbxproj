@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */; };
+		010CED09183C42FA00764A39 /* EndGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010CED08183C42FA00764A39 /* EndGameViewController.m */; };
+		010CED0C183C4AA300764A39 /* youlose.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CED0A183C4AA300764A39 /* youlose.png */; };
+		010CED0D183C4AA300764A39 /* youwin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CED0B183C4AA300764A39 /* youwin1.png */; };
 		011124F518297E3300254757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F418297E3300254757 /* Foundation.framework */; };
 		011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F618297E3400254757 /* CoreGraphics.framework */; };
 		011124F918297E3400254757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011124F818297E3400254757 /* UIKit.framework */; };
@@ -16,7 +19,6 @@
 		0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */; };
 		0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111250618297E3400254757 /* Main_iPhone.storyboard */; };
 		0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111250918297E3400254757 /* Main_iPad.storyboard */; };
-		0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111250D18297E3400254757 /* EnemyUnknownViewController.m */; };
 		0111251018297E3400254757 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0111250F18297E3400254757 /* Images.xcassets */; };
 		0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252E18298AE800254757 /* MediaPlayer.framework */; };
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
@@ -25,6 +27,9 @@
 		011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD31836962900463BBF /* AudioToolbox.framework */; };
 		011D6FDA183697CC00463BBF /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 011D6FD51836972E00463BBF /* menu.mp3 */; };
 		011D6FDD1836987100463BBF /* MusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011D6FDC1836987100463BBF /* MusicController.m */; };
+		0126FEF5183C23DE008476F0 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEF4183C23DE008476F0 /* InAppPurchaseViewController.m */; };
+		0126FEF8183C2AC0008476F0 /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEF7183C2AC0008476F0 /* HowToPlayViewController.m */; };
+		0126FEFB183C2D0D008476F0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEFA183C2D0D008476F0 /* AboutViewController.m */; };
 		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
 		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; };
 		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
@@ -54,6 +59,10 @@
 /* Begin PBXFileReference section */
 		010B67861829F77F005C9B4B /* NoAnimationModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoAnimationModalSegue.h; path = Controllers/NoAnimationModalSegue.h; sourceTree = "<group>"; };
 		010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoAnimationModalSegue.m; path = Controllers/NoAnimationModalSegue.m; sourceTree = "<group>"; };
+		010CED07183C42FA00764A39 /* EndGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndGameViewController.h; path = Controllers/EndGameViewController.h; sourceTree = "<group>"; };
+		010CED08183C42FA00764A39 /* EndGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EndGameViewController.m; path = Controllers/EndGameViewController.m; sourceTree = "<group>"; };
+		010CED0A183C4AA300764A39 /* youlose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = youlose.png; path = ../youlose.png; sourceTree = "<group>"; };
+		010CED0B183C4AA300764A39 /* youwin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = youwin1.png; path = ../youwin1.png; sourceTree = "<group>"; };
 		011124F118297E3300254757 /* Enemy Unknown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enemy Unknown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		011124F418297E3300254757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		011124F618297E3400254757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +75,6 @@
 		0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyUnknownAppDelegate.m; sourceTree = "<group>"; };
 		0111250718297E3400254757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		0111250A18297E3400254757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		0111250C18297E3400254757 /* EnemyUnknownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyUnknownViewController.h; sourceTree = "<group>"; };
-		0111250D18297E3400254757 /* EnemyUnknownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyUnknownViewController.m; sourceTree = "<group>"; };
 		0111250F18297E3400254757 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0111251618297E3400254757 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0111252E18298AE800254757 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -79,6 +86,12 @@
 		011D6FD51836972E00463BBF /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../menu.mp3; sourceTree = "<group>"; };
 		011D6FDB1836987100463BBF /* MusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicController.h; path = Model/MusicController.h; sourceTree = "<group>"; };
 		011D6FDC1836987100463BBF /* MusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicController.m; path = Model/MusicController.m; sourceTree = "<group>"; };
+		0126FEF3183C23DE008476F0 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchaseViewController.h; path = Controllers/InAppPurchaseViewController.h; sourceTree = "<group>"; };
+		0126FEF4183C23DE008476F0 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InAppPurchaseViewController.m; path = Controllers/InAppPurchaseViewController.m; sourceTree = "<group>"; };
+		0126FEF6183C2AC0008476F0 /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HowToPlayViewController.h; path = Controllers/HowToPlayViewController.h; sourceTree = "<group>"; };
+		0126FEF7183C2AC0008476F0 /* HowToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HowToPlayViewController.m; path = Controllers/HowToPlayViewController.m; sourceTree = "<group>"; };
+		0126FEF9183C2D0D008476F0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Controllers/AboutViewController.h; sourceTree = "<group>"; };
+		0126FEFA183C2D0D008476F0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Controllers/AboutViewController.m; sourceTree = "<group>"; };
 		013B07BA182ACEF300E76CBF /* GameWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameWebViewController.h; path = Controllers/GameWebViewController.h; sourceTree = "<group>"; };
 		013B07BB182ACEF300E76CBF /* GameWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameWebViewController.m; path = Controllers/GameWebViewController.m; sourceTree = "<group>"; };
 		014039B7182C39A200FEA379 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -129,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */,
 				011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */,
 				011D6FD21836955A00463BBF /* AVFoundation.framework in Frameworks */,
 				8C94DA64182C8187004F8D22 /* MobileCoreServices.framework in Frameworks */,
@@ -136,7 +150,6 @@
 				0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */,
 				014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */,
 				011124F718297E3400254757 /* CoreGraphics.framework in Frameworks */,
-				014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */,
 				011124F918297E3400254757 /* UIKit.framework in Frameworks */,
 				011124F518297E3300254757 /* Foundation.framework in Frameworks */,
 			);
@@ -145,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010CED0E183C4AAE00764A39 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				010CED0A183C4AA300764A39 /* youlose.png */,
+				010CED0B183C4AA300764A39 /* youwin1.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		011124E818297E3300254757 = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +209,6 @@
 				8C94DA2B182AD57F004F8D22 /* Categories */,
 				011D6FDE1836988500463BBF /* Models */,
 				0111253318298B6500254757 /* Controllers */,
-				0111250C18297E3400254757 /* EnemyUnknownViewController.h */,
-				0111250D18297E3400254757 /* EnemyUnknownViewController.m */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
 				0111250918297E3400254757 /* Main_iPad.storyboard */,
 				8C94DA55182C7A1D004F8D22 /* Libraries */,
@@ -214,6 +234,12 @@
 		0111253318298B6500254757 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				010CED07183C42FA00764A39 /* EndGameViewController.h */,
+				010CED08183C42FA00764A39 /* EndGameViewController.m */,
+				0126FEF9183C2D0D008476F0 /* AboutViewController.h */,
+				0126FEFA183C2D0D008476F0 /* AboutViewController.m */,
+				0126FEF3183C23DE008476F0 /* InAppPurchaseViewController.h */,
+				0126FEF4183C23DE008476F0 /* InAppPurchaseViewController.m */,
 				0146629A182C2C7E005E6162 /* LobbyViewController.h */,
 				0146629B182C2C7E005E6162 /* LobbyViewController.m */,
 				013B07BA182ACEF300E76CBF /* GameWebViewController.h */,
@@ -224,6 +250,8 @@
 				010B67871829F77F005C9B4B /* NoAnimationModalSegue.m */,
 				8C94DA57182C7BE0004F8D22 /* MainMenuViewController.h */,
 				8C94DA58182C7BE0004F8D22 /* MainMenuViewController.m */,
+				0126FEF6183C2AC0008476F0 /* HowToPlayViewController.h */,
+				0126FEF7183C2AC0008476F0 /* HowToPlayViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +259,7 @@
 		011125361829974200254757 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				010CED0E183C4AAE00764A39 /* images */,
 				8C258151183959A2001D56B9 /* loading.jpg */,
 				011D6FD71836974200463BBF /* Sounds */,
 				8C94DA62182C7F61004F8D22 /* gifs */,
@@ -404,6 +433,8 @@
 			files = (
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
 				011D6FDA183697CC00463BBF /* menu.mp3 in Resources */,
+				010CED0C183C4AA300764A39 /* youlose.png in Resources */,
+				010CED0D183C4AA300764A39 /* youwin1.png in Resources */,
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
 				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
 				011125461829A4F100254757 /* demo.m4v in Resources */,
@@ -422,7 +453,9 @@
 			files = (
 				8C94DA52182AF6EC004F8D22 /* SBJsonTokeniser.m in Sources */,
 				8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */,
+				0126FEF5183C23DE008476F0 /* InAppPurchaseViewController.m in Sources */,
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
+				010CED09183C42FA00764A39 /* EndGameViewController.m in Sources */,
 				8C94DA4E182AF6EC004F8D22 /* SBJsonStreamParserState.m in Sources */,
 				0111253F18299A5200254757 /* TrailerViewController.m in Sources */,
 				010B67881829F77F005C9B4B /* NoAnimationModalSegue.m in Sources */,
@@ -436,13 +469,14 @@
 				8C94DA59182C7BE0004F8D22 /* MainMenuViewController.m in Sources */,
 				011D6FDD1836987100463BBF /* MusicController.m in Sources */,
 				8C94DA53182AF6EC004F8D22 /* SBJsonUTF8Stream.m in Sources */,
-				0111250E18297E3400254757 /* EnemyUnknownViewController.m in Sources */,
 				8C94DA5F182C7C3C004F8D22 /* OLImageView.m in Sources */,
 				8C94DA50182AF6EC004F8D22 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				8C94DA4F182AF6EC004F8D22 /* SBJsonStreamWriter.m in Sources */,
 				8C94DA51182AF6EC004F8D22 /* SBJsonStreamWriterState.m in Sources */,
 				8C94DA4B182AF6EC004F8D22 /* SBJsonStreamParser.m in Sources */,
 				8C94DA5E182C7C3C004F8D22 /* OLImage.m in Sources */,
+				0126FEF8183C2AC0008476F0 /* HowToPlayViewController.m in Sources */,
+				0126FEFB183C2D0D008476F0 /* AboutViewController.m in Sources */,
 				8C94DA4D182AF6EC004F8D22 /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

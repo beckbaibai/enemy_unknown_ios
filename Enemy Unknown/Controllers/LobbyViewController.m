@@ -119,7 +119,6 @@
         }
         GameWebViewController *vc = [segue destinationViewController];
         [vc setScenario:self.scenarioSelected];
-        NSLog(@"%@",self.scenarioSelected);
     }
 }
 
@@ -148,6 +147,9 @@
     [appDelegate.musicPlayer.menuPlayer play];
     self.hasAds = NO;
     self.adView.hidden = YES;
+}
+
+- (IBAction)unwindToLobby:(UIStoryboardSegue *)sender {
 }
 
 @end
