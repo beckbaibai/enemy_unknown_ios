@@ -21,15 +21,22 @@
 
 @implementation GameWebViewController
 
+- (IBAction)resign:(UIButton *)sender {
+    [self.webView removeFromSuperview];
+    [self.webView setDelegate:nil];
+    self.webView = nil;
+    [self gameWon:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [self.webView.scrollView setDelaysContentTouches:NO];
-    [self.webView stringByEvaluatingJavaScriptFromString:@"document. body.style.zoom = 5.0;"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.body.style.zoom =  1.0;"];
 	NSString *fullURL = @"http://enemyunknown.nodejitsu.com";
-    //NSString *fullURL = @"http://192.168.52.1:4004";
+    //NSString *fullURL = @"http://10.100.194.46:4004";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
@@ -51,6 +58,8 @@
     frame.size = correctSize;
     float scaleFactor = frame.size.width / 800;
     self.webView.transform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
+    
+    
 }
 
 
@@ -92,8 +101,7 @@
         
         if ([args count] != 1)
             NSLog(@"endGame takes exactly 1 argument!");
-        NSLog(@"endGame called successfully!");
-        // TODO
+        [self gameWon:(BOOL)args[0]];
         
     } else if ([functionName isEqualToString:@"alert"]) {
         NSLog(@"WENGWENGWENG!!");
@@ -111,6 +119,7 @@
 - (void)hasFinishedLoading
 {
     [self.loadingImageView setHidden:YES];
+  //  [self gameWon:YES];
 }
 
 

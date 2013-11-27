@@ -29,7 +29,6 @@
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
     NSURL *fileURL = [NSURL fileURLWithPath:filepath];
     NSData *logoData = [NSData dataWithContentsOfURL:fileURL];
-    assert(logoData!=nil);
     UIImage *logoImage = [OLImage imageWithData:logoData];
     self.logo.image = logoImage;
     [self.view addSubview:self.logo];
@@ -82,6 +81,7 @@
 
 - (void)showGameCenter
 {
+    [self authenticateLocalPlayer];
     GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
     if (gameCenterController != nil)
     {

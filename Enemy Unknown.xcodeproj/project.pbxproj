@@ -35,6 +35,8 @@
 		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
 		01466299182C2198005E6162 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01466298182C2198005E6162 /* iAd.framework */; };
 		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
+		014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */ = {isa = PBXBuildFile; fileRef = 014BD248183FF76F00863D62 /* howtoplaycamera.gif */; };
+		014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */; };
 		8C258152183959A2001D56B9 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C258151183959A2001D56B9 /* loading.jpg */; };
 		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
@@ -99,6 +101,8 @@
 		01466298182C2198005E6162 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0146629A182C2C7E005E6162 /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyViewController.h; path = Controllers/LobbyViewController.h; sourceTree = "<group>"; };
 		0146629B182C2C7E005E6162 /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LobbyViewController.m; path = Controllers/LobbyViewController.m; sourceTree = "<group>"; };
+		014BD248183FF76F00863D62 /* howtoplaycamera.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = howtoplaycamera.gif; path = ../howtoplaycamera.gif; sourceTree = "<group>"; };
+		014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = howtoplaymoveattack.gif; path = ../howtoplaymoveattack.gif; sourceTree = "<group>"; };
 		8C258151183959A2001D56B9 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loading.jpg; path = ../loading.jpg; sourceTree = "<group>"; };
 		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
 		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
@@ -161,6 +165,9 @@
 		010CED0E183C4AAE00764A39 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				014BD248183FF76F00863D62 /* howtoplaycamera.gif */,
+				014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */,
+				8C258151183959A2001D56B9 /* loading.jpg */,
 				010CED0A183C4AA300764A39 /* youlose.png */,
 				010CED0B183C4AA300764A39 /* youwin1.png */,
 			);
@@ -260,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				010CED0E183C4AAE00764A39 /* images */,
-				8C258151183959A2001D56B9 /* loading.jpg */,
 				011D6FD71836974200463BBF /* Sounds */,
 				8C94DA62182C7F61004F8D22 /* gifs */,
 				011125371829974900254757 /* Trailer */,
@@ -432,6 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
+				014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */,
+				014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */,
 				011D6FDA183697CC00463BBF /* menu.mp3 in Resources */,
 				010CED0C183C4AA300764A39 /* youlose.png in Resources */,
 				010CED0D183C4AA300764A39 /* youwin1.png in Resources */,
