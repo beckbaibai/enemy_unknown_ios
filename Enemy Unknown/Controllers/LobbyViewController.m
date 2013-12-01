@@ -44,6 +44,7 @@
     [super viewDidLoad];
     
     self.scenarioArray = [self scenarios];
+    //TODO
     self.hasAds = YES;
     self.adView.hidden = YES;
 }
