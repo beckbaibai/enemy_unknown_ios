@@ -31,7 +31,7 @@
 		0126FEF8183C2AC0008476F0 /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEF7183C2AC0008476F0 /* HowToPlayViewController.m */; };
 		0126FEFB183C2D0D008476F0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEFA183C2D0D008476F0 /* AboutViewController.m */; };
 		013B07BC182ACEF300E76CBF /* GameWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B07BB182ACEF300E76CBF /* GameWebViewController.m */; };
-		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; };
+		014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B7182C39A200FEA379 /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		014039BA182C3A1C00FEA379 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014039B9182C3A1C00FEA379 /* GameKit.framework */; };
 		01466299182C2198005E6162 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01466298182C2198005E6162 /* iAd.framework */; };
 		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
@@ -48,6 +48,7 @@
 		01E304C8184AF71800ECBA63 /* kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BE184AF71800ECBA63 /* kill.mp3 */; };
 		01E304C9184AF71800ECBA63 /* ko.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BF184AF71800ECBA63 /* ko.mp3 */; };
 		8C258152183959A2001D56B9 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C258151183959A2001D56B9 /* loading.jpg */; };
+		8C25815418469EFF001D56B9 /* product_ids.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C25815318469EFF001D56B9 /* product_ids.plist */; };
 		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
 		8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA34182AF6EC004F8D22 /* SBJsonParser.m */; };
@@ -124,6 +125,7 @@
 		01E304BE184AF71800ECBA63 /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kill.mp3; path = ../kill.mp3; sourceTree = "<group>"; };
 		01E304BF184AF71800ECBA63 /* ko.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ko.mp3; path = ../ko.mp3; sourceTree = "<group>"; };
 		8C258151183959A2001D56B9 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loading.jpg; path = ../loading.jpg; sourceTree = "<group>"; };
+		8C25815318469EFF001D56B9 /* product_ids.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = product_ids.plist; sourceTree = "<group>"; };
 		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
 		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
 		8C94DA30182AF6EC004F8D22 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		011124FB18297E3400254757 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C25815318469EFF001D56B9 /* product_ids.plist */,
 				0111250318297E3400254757 /* EnemyUnknownAppDelegate.h */,
 				0111250418297E3400254757 /* EnemyUnknownAppDelegate.m */,
 				0111250F18297E3400254757 /* Images.xcassets */,
@@ -486,6 +489,7 @@
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
 				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
 				011125461829A4F100254757 /* demo.m4v in Resources */,
+				8C25815418469EFF001D56B9 /* product_ids.plist in Resources */,
 				0111251018297E3400254757 /* Images.xcassets in Resources */,
 				0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */,
 				011124FF18297E3400254757 /* InfoPlist.strings in Resources */,
