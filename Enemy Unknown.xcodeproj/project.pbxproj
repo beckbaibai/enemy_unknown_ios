@@ -37,6 +37,16 @@
 		0146629C182C2C7E005E6162 /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146629B182C2C7E005E6162 /* LobbyViewController.m */; };
 		014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */ = {isa = PBXBuildFile; fileRef = 014BD248183FF76F00863D62 /* howtoplaycamera.gif */; };
 		014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */; };
+		01E304C0184AF71800ECBA63 /* attack_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304B6184AF71800ECBA63 /* attack_1.mp3 */; };
+		01E304C1184AF71800ECBA63 /* attack_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304B7184AF71800ECBA63 /* attack_2.mp3 */; };
+		01E304C2184AF71800ECBA63 /* attack1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304B8184AF71800ECBA63 /* attack1.mp3 */; };
+		01E304C3184AF71800ECBA63 /* attack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304B9184AF71800ECBA63 /* attack2.mp3 */; };
+		01E304C4184AF71800ECBA63 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BA184AF71800ECBA63 /* background.mp3 */; };
+		01E304C5184AF71800ECBA63 /* die.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BB184AF71800ECBA63 /* die.mp3 */; };
+		01E304C6184AF71800ECBA63 /* flagcap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BC184AF71800ECBA63 /* flagcap.mp3 */; };
+		01E304C7184AF71800ECBA63 /* gothit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BD184AF71800ECBA63 /* gothit.mp3 */; };
+		01E304C8184AF71800ECBA63 /* kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BE184AF71800ECBA63 /* kill.mp3 */; };
+		01E304C9184AF71800ECBA63 /* ko.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E304BF184AF71800ECBA63 /* ko.mp3 */; };
 		8C258152183959A2001D56B9 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C258151183959A2001D56B9 /* loading.jpg */; };
 		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
@@ -103,6 +113,16 @@
 		0146629B182C2C7E005E6162 /* LobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LobbyViewController.m; path = Controllers/LobbyViewController.m; sourceTree = "<group>"; };
 		014BD248183FF76F00863D62 /* howtoplaycamera.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = howtoplaycamera.gif; path = ../howtoplaycamera.gif; sourceTree = "<group>"; };
 		014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = howtoplaymoveattack.gif; path = ../howtoplaymoveattack.gif; sourceTree = "<group>"; };
+		01E304B6184AF71800ECBA63 /* attack_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = attack_1.mp3; path = ../attack_1.mp3; sourceTree = "<group>"; };
+		01E304B7184AF71800ECBA63 /* attack_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = attack_2.mp3; path = ../attack_2.mp3; sourceTree = "<group>"; };
+		01E304B8184AF71800ECBA63 /* attack1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = attack1.mp3; path = ../attack1.mp3; sourceTree = "<group>"; };
+		01E304B9184AF71800ECBA63 /* attack2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = attack2.mp3; path = ../attack2.mp3; sourceTree = "<group>"; };
+		01E304BA184AF71800ECBA63 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background.mp3; path = ../background.mp3; sourceTree = "<group>"; };
+		01E304BB184AF71800ECBA63 /* die.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = die.mp3; path = ../die.mp3; sourceTree = "<group>"; };
+		01E304BC184AF71800ECBA63 /* flagcap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flagcap.mp3; path = ../flagcap.mp3; sourceTree = "<group>"; };
+		01E304BD184AF71800ECBA63 /* gothit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gothit.mp3; path = ../gothit.mp3; sourceTree = "<group>"; };
+		01E304BE184AF71800ECBA63 /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kill.mp3; path = ../kill.mp3; sourceTree = "<group>"; };
+		01E304BF184AF71800ECBA63 /* ko.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ko.mp3; path = ../ko.mp3; sourceTree = "<group>"; };
 		8C258151183959A2001D56B9 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loading.jpg; path = ../loading.jpg; sourceTree = "<group>"; };
 		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
 		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
@@ -285,6 +305,16 @@
 		011D6FD71836974200463BBF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				01E304B6184AF71800ECBA63 /* attack_1.mp3 */,
+				01E304B7184AF71800ECBA63 /* attack_2.mp3 */,
+				01E304B8184AF71800ECBA63 /* attack1.mp3 */,
+				01E304B9184AF71800ECBA63 /* attack2.mp3 */,
+				01E304BA184AF71800ECBA63 /* background.mp3 */,
+				01E304BB184AF71800ECBA63 /* die.mp3 */,
+				01E304BC184AF71800ECBA63 /* flagcap.mp3 */,
+				01E304BD184AF71800ECBA63 /* gothit.mp3 */,
+				01E304BE184AF71800ECBA63 /* kill.mp3 */,
+				01E304BF184AF71800ECBA63 /* ko.mp3 */,
 				011D6FD51836972E00463BBF /* menu.mp3 */,
 			);
 			name = Sounds;
@@ -437,6 +467,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E304C0184AF71800ECBA63 /* attack_1.mp3 in Resources */,
+				01E304C1184AF71800ECBA63 /* attack_2.mp3 in Resources */,
+				01E304C2184AF71800ECBA63 /* attack1.mp3 in Resources */,
+				01E304C3184AF71800ECBA63 /* attack2.mp3 in Resources */,
+				01E304C4184AF71800ECBA63 /* background.mp3 in Resources */,
+				01E304C5184AF71800ECBA63 /* die.mp3 in Resources */,
+				01E304C6184AF71800ECBA63 /* flagcap.mp3 in Resources */,
+				01E304C7184AF71800ECBA63 /* gothit.mp3 in Resources */,
+				01E304C8184AF71800ECBA63 /* kill.mp3 in Resources */,
+				01E304C9184AF71800ECBA63 /* ko.mp3 in Resources */,
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
 				014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */,
 				014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */,
