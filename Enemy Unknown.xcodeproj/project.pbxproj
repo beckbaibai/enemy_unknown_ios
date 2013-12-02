@@ -57,6 +57,11 @@
 		8C94DA5F182C7C3C004F8D22 /* OLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA5D182C7C3C004F8D22 /* OLImageView.m */; };
 		8C94DA64182C8187004F8D22 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */; };
 		8C94DA68182C8324004F8D22 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C94DA67182C8324004F8D22 /* logo.gif */; };
+		8CAEA54D184C3E3300BE62BF /* bottomRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA548184C3E3300BE62BF /* bottomRow.png */; };
+		8CAEA54E184C3E3300BE62BF /* gradientBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA549184C3E3300BE62BF /* gradientBackground.png */; };
+		8CAEA54F184C3E3300BE62BF /* middleRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA54A184C3E3300BE62BF /* middleRow.png */; };
+		8CAEA550184C3E3300BE62BF /* topAndBottomRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA54B184C3E3300BE62BF /* topAndBottomRow.png */; };
+		8CAEA551184C3E3300BE62BF /* topRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA54C184C3E3300BE62BF /* topRow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +146,11 @@
 		8C94DA5D182C7C3C004F8D22 /* OLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLImageView.m; sourceTree = "<group>"; };
 		8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8C94DA67182C8324004F8D22 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = ../logo.gif; sourceTree = "<group>"; };
+		8CAEA548184C3E3300BE62BF /* bottomRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomRow.png; sourceTree = "<group>"; };
+		8CAEA549184C3E3300BE62BF /* gradientBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradientBackground.png; sourceTree = "<group>"; };
+		8CAEA54A184C3E3300BE62BF /* middleRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleRow.png; sourceTree = "<group>"; };
+		8CAEA54B184C3E3300BE62BF /* topAndBottomRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topAndBottomRow.png; sourceTree = "<group>"; };
+		8CAEA54C184C3E3300BE62BF /* topRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topRow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +182,11 @@
 				8C258151183959A2001D56B9 /* loading.jpg */,
 				010CED0A183C4AA300764A39 /* youlose.png */,
 				010CED0B183C4AA300764A39 /* youwin1.png */,
+				8CAEA548184C3E3300BE62BF /* bottomRow.png */,
+				8CAEA549184C3E3300BE62BF /* gradientBackground.png */,
+				8CAEA54A184C3E3300BE62BF /* middleRow.png */,
+				8CAEA54B184C3E3300BE62BF /* topAndBottomRow.png */,
+				8CAEA54C184C3E3300BE62BF /* topRow.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -440,18 +455,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAEA550184C3E3300BE62BF /* topAndBottomRow.png in Resources */,
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
+				8CAEA54D184C3E3300BE62BF /* bottomRow.png in Resources */,
 				014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */,
 				014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */,
 				011D6FDA183697CC00463BBF /* menu.mp3 in Resources */,
 				010CED0C183C4AA300764A39 /* youlose.png in Resources */,
 				010CED0D183C4AA300764A39 /* youwin1.png in Resources */,
+				8CAEA551184C3E3300BE62BF /* topRow.png in Resources */,
+				8CAEA54F184C3E3300BE62BF /* middleRow.png in Resources */,
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
 				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
 				011125461829A4F100254757 /* demo.m4v in Resources */,
 				8C25815418469EFF001D56B9 /* product_ids.plist in Resources */,
 				0111251018297E3400254757 /* Images.xcassets in Resources */,
 				0111250818297E3400254757 /* Main_iPhone.storyboard in Resources */,
+				8CAEA54E184C3E3300BE62BF /* gradientBackground.png in Resources */,
 				011124FF18297E3400254757 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

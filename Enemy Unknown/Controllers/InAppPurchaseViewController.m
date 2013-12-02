@@ -37,8 +37,16 @@
 
 - (void) displayStoreUI
 {
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.rowHeight = 100;
+    
     [self.tableView reloadData];
     self.tableView.hidden = NO;
+}
+
+- (IBAction) back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - SKProductsRequest delegate
@@ -74,21 +82,40 @@ didFailWithError:(NSError *)error
           cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Item For Purchase";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier
+                                                                 forIndexPath:indexPath];
+    NSInteger row = [indexPath row];
     
     // configure cell
-    cell.textLabel.text = ((SKProduct *)self.products[indexPath.row]).localizedTitle;
-    cell.detailTextLabel.text = ((SKProduct *)self.products[indexPath.row]).localizedDescription;
+    cell.textLabel.text = ((SKProduct *)self.products[row]).localizedTitle;
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.text = ((SKProduct *)self.products[row]).localizedDescription;
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    
+    UIButton *buyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [buyButton setTitle:[NSString stringWithFormat:@"Buy at %@", ((SKProduct *)self.products[row]).price]
+               forState:UIControlStateNormal];
+    [buyButton setFrame:CGRectMake(0, 0, 100, 35)];
+    cell.accessoryView = buyButton;
     
     return cell;
 }
 
 #pragma mark - Table view delegate
 
-// TODO
+// Does not allow any cell to be selected
+- (NSIndexPath *)tableView:(UITableView *)tableView
+  willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+}
 
-- (IBAction) back:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+// Change background color
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor blackColor]];
 }
 
 @end
