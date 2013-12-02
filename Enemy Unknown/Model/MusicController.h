@@ -10,5 +10,7 @@
 
 @interface MusicController : NSObject
 @property (strong,nonatomic) AVAudioPlayer *menuPlayer;
+@property (strong,nonatomic) NSDictionary *inGameSounds;
 -(void)initMenuPlayer;
+-(void)initInGameSound;
 @end

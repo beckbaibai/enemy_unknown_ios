@@ -137,4 +137,12 @@
     }
 }
 
+-(void)playSound:(NSString *)sound{
+    
+}
+
+-(void)stopSound:(NSString *)sound{
+    
+}
+
 @end
