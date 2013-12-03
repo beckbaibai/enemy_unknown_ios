@@ -11,6 +11,7 @@
 #import "SBJson.h"
 #import "EnemyUnknownAppDelegate.h"
 #import "EndGameViewController.h"
+#import <GameKit/GameKit.h>
 
 @interface GameWebViewController () <UIWebViewDelegate>
 @property (nonatomic) BOOL iWon;
@@ -134,6 +135,27 @@
 
 -(void)gameWon:(BOOL) iWon
 {
+    if([GKLocalPlayer localPlayer].authenticated) {
+        NSArray *arr = [[NSArray alloc] initWithObjects:[GKLocalPlayer localPlayer].playerID, nil];
+        GKLeaderboard *board = [[GKLeaderboard alloc] initWithPlayerIDs:arr];
+        if(board != nil) {
+            board.timeScope = GKLeaderboardTimeScopeAllTime;
+            board.range = NSMakeRange(1, 1);
+            board.identifier = @"EnemyUnknownWins";
+            [board loadScoresWithCompletionHandler: ^(NSArray *scores, NSError *error) {
+                if (error != nil) {
+                    // handle the error.
+                    NSLog(@"Error retrieving score.", nil);
+                }
+                if (scores != nil) {
+                    NSLog(@"My Score: %lli", ((GKScore*)[scores objectAtIndex:0]).value);
+                }
+            }];
+        }
+    }
+    [self reportScore:10 forLeaderboardID:@"EnemyUnknownWins"];
+    [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
+    
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     AVAudioPlayer *backgroundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:@"background"];
     [backgroundPlayer stop];
@@ -143,6 +165,29 @@
     self.iWon = iWon;
     [self performSegueWithIdentifier: @"End Game"
                               sender: self];
+}
+
+- (void)reportScore:(int64_t)score forLeaderboardID: (NSString*) identifier
+{
+    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: identifier];
+    scoreReporter.value = score;
+    scoreReporter.context = 0;
+    
+    NSArray *scores = @[scoreReporter];
+    [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
+    }];
+}
+
+- (void) reportAchievement: (NSString*) identifier percentComplete: (float) percent
+{
+    GKAchievement *achievement = [[GKAchievement alloc] initWithIdentifier: identifier];
+    if (achievement)
+    {
+        achievement.percentComplete = percent;
+        NSArray *achievements = @[achievement];
+        [GKAchievement reportAchievements:achievements withCompletionHandler:^(NSError *error){
+        }];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
