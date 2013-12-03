@@ -127,4 +127,15 @@
     [self loadVisiblePages];
 }
 
+- (IBAction)pageChanged:(UIPageControl *)sender {
+    // update the scroll view to the appropriate page
+    CGRect frame;
+    frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
+    frame.origin.y = 0;
+    frame.size = self.scrollView.frame.size;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
+}
+
+
+
 @end

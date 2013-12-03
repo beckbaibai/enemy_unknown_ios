@@ -11,12 +11,15 @@
 #import "SBJson.h"
 #import "EnemyUnknownAppDelegate.h"
 #import "EndGameViewController.h"
-#import <GameKit/GameKit.h>
+
 
 @interface GameWebViewController () <UIWebViewDelegate>
 @property (nonatomic) BOOL iWon;
 @property (strong, nonatomic) SBJsonParser *json;
-@property (weak, nonatomic) IBOutlet UIImageView *loadingImageView;
+@property (strong, nonatomic) IBOutlet UIProgressView *progressView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) IBOutlet UILabel *loading;
+
 
 @end
 
@@ -32,6 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.webView setHidden:YES];
+    [self.activityIndicator startAnimating];
+    [self.activityIndicator setHidesWhenStopped:YES];
+    self.progressView.progress=0.25;
+    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(progressUpdate) userInfo:nil repeats:NO];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [self.webView.scrollView setDelaysContentTouches:NO];
@@ -47,10 +55,7 @@
     self.json = [[SBJsonParser alloc] init];
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate.musicPlayer initInGameSound];
-//    // Delay execution of my block for 10 seconds.
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
-//        appDelegate.musicPlayer.menuPlayer.volume = 0.8;
-//    });
+
     self.webView.bounds = CGRectMake(0, 0, 600, 800);
     CGRect frame = self.view.frame;
     CGSize correctSize;
@@ -129,33 +134,16 @@
 {
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate.musicPlayer.menuPlayer stop];
-    [self.loadingImageView setHidden:YES];
+    [self.progressView setHidden:YES];
+    [self.webView setHidden:NO];
+    [self.loading setHidden:YES];
+    [self.activityIndicator stopAnimating];
+    
 }
 
 
 -(void)gameWon:(BOOL) iWon
 {
-    if([GKLocalPlayer localPlayer].authenticated) {
-        NSArray *arr = [[NSArray alloc] initWithObjects:[GKLocalPlayer localPlayer].playerID, nil];
-        GKLeaderboard *board = [[GKLeaderboard alloc] initWithPlayerIDs:arr];
-        if(board != nil) {
-            board.timeScope = GKLeaderboardTimeScopeAllTime;
-            board.range = NSMakeRange(1, 1);
-            board.identifier = @"EnemyUnknownWins";
-            [board loadScoresWithCompletionHandler: ^(NSArray *scores, NSError *error) {
-                if (error != nil) {
-                    // handle the error.
-                    NSLog(@"Error retrieving score.", nil);
-                }
-                if (scores != nil) {
-                    NSLog(@"My Score: %lli", ((GKScore*)[scores objectAtIndex:0]).value);
-                }
-            }];
-        }
-    }
-    [self reportScore:10 forLeaderboardID:@"EnemyUnknownWins"];
-    [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
-    
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     AVAudioPlayer *backgroundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:@"background"];
     [backgroundPlayer stop];
@@ -167,28 +155,7 @@
                               sender: self];
 }
 
-- (void)reportScore:(int64_t)score forLeaderboardID: (NSString*) identifier
-{
-    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: identifier];
-    scoreReporter.value = score;
-    scoreReporter.context = 0;
-    
-    NSArray *scores = @[scoreReporter];
-    [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
-    }];
-}
 
-- (void) reportAchievement: (NSString*) identifier percentComplete: (float) percent
-{
-    GKAchievement *achievement = [[GKAchievement alloc] initWithIdentifier: identifier];
-    if (achievement)
-    {
-        achievement.percentComplete = percent;
-        NSArray *achievements = @[achievement];
-        [GKAchievement reportAchievements:achievements withCompletionHandler:^(NSError *error){
-        }];
-    }
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"End Game"]){
@@ -210,5 +177,17 @@
     AVAudioPlayer *soundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:sound];
     [soundPlayer stop];
 }
+
+
+
+
+
+-(void)progressUpdate {
+    float actual = [self.progressView progress];
+    self.progressView.progress = (1.0-actual)/2+actual;
+    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(progressUpdate) userInfo:nil repeats:NO];
+    
+}
+
 
 @end
