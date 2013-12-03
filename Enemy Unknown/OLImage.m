@@ -172,7 +172,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
         self.frameDurations[i] = frameDuration;
         self.totalDuration += frameDuration;
     }
-    CFTimeInterval start = CFAbsoluteTimeGetCurrent();
+    //CFTimeInterval start = CFAbsoluteTimeGetCurrent();
     // Load first frame
     CGImageRef firstImage = CGImageSourceCreateImageAtIndex(imageSource, 0, NULL);
     [self.images replaceObjectAtIndex:0 withObject:[UIImage imageWithCGImage:firstImage scale:scale orientation:UIImageOrientationUp]];
@@ -192,7 +192,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
             [strongSelf.images replaceObjectAtIndex:i withObject:[UIImage imageWithCGImage:frameImageRef scale:scale orientation:UIImageOrientationUp]];
             CFRelease(frameImageRef);
         });
-        NSLog(@"Fully decoded %d frames: %f", [weakSelf.images count], CFAbsoluteTimeGetCurrent()-start);
+        // NSLog(@"Fully decoded %lu frames: %f", (unsigned long)[weakSelf.images count], CFAbsoluteTimeGetCurrent()-start);
         CFRelease(imageSource);
     });
     
