@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
 
-@interface MainMenuViewController : UIViewController <GKGameCenterControllerDelegate>
+@interface MainMenuViewController : UIViewController <GKGameCenterControllerDelegate, UIAlertViewDelegate>
 
 @end

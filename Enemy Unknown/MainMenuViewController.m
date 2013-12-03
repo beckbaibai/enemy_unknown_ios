@@ -36,8 +36,7 @@
 
 - (IBAction)gameCenterOpen:(UIButton *)sender {
     [self showGameCenter];
-    [self reportScore:10 forLeaderboardID:@"EnemyUnknownWins"];
-    [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
+
 }
 
 - (void)viewDidLoad
@@ -81,13 +80,35 @@
 
 - (void)showGameCenter
 {
-    [self authenticateLocalPlayer];
-    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
-    if (gameCenterController != nil)
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
+    if(blockLocalPlayer.isAuthenticated){
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        if (gameCenterController != nil)
+        {
+            gameCenterController.gameCenterDelegate = self;
+            gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
+            [self presentViewController: gameCenterController animated: YES completion:nil];
+        }
+    }else{
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Center unavailable!"
+                                                          message:@"\n If you did not login, click 'Ok' to login to game center.\n\n If game center is disabled, logout and then login again to renable game center for Enemy Unknown"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Ok", nil];
+        [message show];
+       
+    }
+    
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Ok"])
     {
-        gameCenterController.gameCenterDelegate = self;
-        gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
-        [self presentViewController: gameCenterController animated: YES completion:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:"]];
     }
 }
 
@@ -96,27 +117,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)reportScore:(int64_t)score forLeaderboardID: (NSString*) identifier
-{
-    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier: identifier];
-    scoreReporter.value = score;
-    scoreReporter.context = 0;
-    
-    NSArray *scores = @[scoreReporter];
-    [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
-    }];
-}
 
-- (void) reportAchievement: (NSString*) identifier percentComplete: (float) percent
-{
-    GKAchievement *achievement = [[GKAchievement alloc] initWithIdentifier: identifier];
-    if (achievement)
-    {
-        achievement.percentComplete = percent;
-        NSArray *achievements = @[achievement];
-        [GKAchievement reportAchievements:achievements withCompletionHandler:^(NSError *error){
-         }];
-    }
-}
 
 @end
