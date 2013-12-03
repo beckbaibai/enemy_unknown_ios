@@ -64,6 +64,8 @@
 		8CAEA551184C3E3300BE62BF /* topRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA54C184C3E3300BE62BF /* topRow.png */; };
 		8CAEA555184C52FC00BE62BF /* purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAEA554184C52FC00BE62BF /* purchase.png */; };
 		8CAEA559184C5C9500BE62BF /* PaymentQueueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAEA558184C5C9500BE62BF /* PaymentQueueObserver.m */; };
+		8CAEA55B184E8FDC00BE62BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAEA55A184E8FDC00BE62BF /* SystemConfiguration.framework */; };
+		8CAEA55E184E906600BE62BF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAEA55D184E906600BE62BF /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,9 @@
 		8CAEA554184C52FC00BE62BF /* purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purchase.png; sourceTree = "<group>"; };
 		8CAEA557184C5C9500BE62BF /* PaymentQueueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentQueueObserver.h; sourceTree = "<group>"; };
 		8CAEA558184C5C9500BE62BF /* PaymentQueueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentQueueObserver.m; sourceTree = "<group>"; };
+		8CAEA55A184E8FDC00BE62BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8CAEA55C184E906600BE62BF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8CAEA55D184E906600BE62BF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAEA55B184E8FDC00BE62BF /* SystemConfiguration.framework in Frameworks */,
 				014039B8182C39A200FEA379 /* StoreKit.framework in Frameworks */,
 				011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */,
 				011D6FD21836955A00463BBF /* AVFoundation.framework in Frameworks */,
@@ -227,6 +233,7 @@
 		011124F318297E3300254757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CAEA55A184E8FDC00BE62BF /* SystemConfiguration.framework */,
 				011D6FD31836962900463BBF /* AudioToolbox.framework */,
 				011D6FD11836955A00463BBF /* AVFoundation.framework */,
 				8C94DA63182C8186004F8D22 /* MobileCoreServices.framework */,
@@ -388,6 +395,7 @@
 		8C94DA55182C7A1D004F8D22 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8CAEA55F184E906A00BE62BF /* Reachability */,
 				8C94DA56182C7A35004F8D22 /* OLImage */,
 				8C94DA2F182AF6EC004F8D22 /* SBJson */,
 			);
@@ -420,6 +428,15 @@
 				8CAEA558184C5C9500BE62BF /* PaymentQueueObserver.m */,
 			);
 			name = Observers;
+			sourceTree = "<group>";
+		};
+		8CAEA55F184E906A00BE62BF /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8CAEA55C184E906600BE62BF /* Reachability.h */,
+				8CAEA55D184E906600BE62BF /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +561,7 @@
 				8C94DA51182AF6EC004F8D22 /* SBJsonStreamWriterState.m in Sources */,
 				8C94DA4B182AF6EC004F8D22 /* SBJsonStreamParser.m in Sources */,
 				8C94DA5E182C7C3C004F8D22 /* OLImage.m in Sources */,
+				8CAEA55E184E906600BE62BF /* Reachability.m in Sources */,
 				8CAEA559184C5C9500BE62BF /* PaymentQueueObserver.m in Sources */,
 				0126FEF8183C2AC0008476F0 /* HowToPlayViewController.m in Sources */,
 				0126FEFB183C2D0D008476F0 /* AboutViewController.m in Sources */,

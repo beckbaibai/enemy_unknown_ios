@@ -9,6 +9,7 @@
 #import "InAppPurchaseViewController.h"
 #import "EnemyUnknownAppDelegate.h"
 #import "PaymentQueueObserver.h"
+#import "Reachability.h"
 #import <StoreKit/SKProductsRequest.h>
 #import <StoreKit/SKProduct.h>
 #import <StoreKit/SKPayment.h>
@@ -29,7 +30,7 @@
 
 - (void) viewDidLoad
 {
-    // register observer
+    // register transaction observer
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     PaymentQueueObserver *pqObserver = appDelegate.pqObserver;
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -37,10 +38,30 @@
                                                  name:nil
                                                object:pqObserver];
     
+    // register internet availability observer
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
     // fetch product info
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"product_ids" withExtension:@"plist"];
     NSArray *productIds = [NSArray arrayWithContentsOfURL:url];
     [self validateProductIds:productIds];
+}
+
+- (void)reachabilityChanged:(NSNotification *)notification
+{
+    Reachability *reachability = notification.object;
+    if (![reachability isReachable]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lost Internet Connection"
+                                                        message:@"You must be connected to the Internet to purchase in-app items."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)validateProductIds:(NSArray *)productIds

@@ -41,6 +41,12 @@
     self.progressView.progress=0.25;
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(progressUpdate) userInfo:nil repeats:NO];
     
+    // register internet availability observer
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [self.webView.scrollView setDelaysContentTouches:NO];
     [self.webView stringByEvaluatingJavaScriptFromString:@"document.body.style.zoom =  1.0;"];
@@ -64,10 +70,21 @@
     frame.size = correctSize;
     float scaleFactor = frame.size.width / 800;
     self.webView.transform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
-    
-    
 }
 
+- (void)reachabilityChanged:(NSNotification *)notification
+{
+    Reachability *reachability = notification.object;
+    if (![reachability isReachable]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lost Internet Connection"
+                                                        message:@"You must be connected to the Internet to play a game."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [self gameWon:NO];;
+    }
+}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
@@ -116,16 +133,15 @@
         
         NSLog(@"hasFinishedLoading called");
         [self hasFinishedLoading];
-    }else if ([functionName isEqualToString:@"playSound"]) {
+    } else if ([functionName isEqualToString:@"playSound"]) {
         NSLog(@"playSound called");
         [self playSound:(NSString *)args[0]];
         
-    }
-    else if ([functionName isEqualToString:@"stopSound"]) {
+    } else if ([functionName isEqualToString:@"stopSound"]) {
         NSLog(@"stopSound called");
         [self stopSound:(NSString *)args[0]];
     
-    }else {
+    } else {
         NSLog(@"Unimplemented method '%@'", functionName);
     }
 }

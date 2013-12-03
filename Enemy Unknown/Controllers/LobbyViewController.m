@@ -124,6 +124,24 @@
     }
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"Start Game"]) {
+        EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        Reachability *reachablity = appDelegate.internetReachable;
+        if (![reachablity isReachable]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                                            message:@"You must be connected to the Internet to play a game."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return NO;
+        }
+    }
+    return YES;
+}
+
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     if(self.hasAds){
@@ -151,7 +169,8 @@
     self.adView.hidden = YES;
 }
 
-- (IBAction)unwindToLobby:(UIStoryboardSegue *)sender {
+- (IBAction)unwindToLobby:(UIStoryboardSegue *)sender
+{
 }
 
 @end

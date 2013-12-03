@@ -16,6 +16,8 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self testInternetConnection];
+    
     self.pqObserver = [[PaymentQueueObserver alloc] init];
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self.pqObserver];
     
@@ -47,6 +49,27 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+# pragma mark - Internet Connectection test
+
+- (void)testInternetConnection
+{
+    self.internetReachable = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is reachable
+    self.internetReachable.reachableBlock = ^(Reachability *reach)
+    {
+        NSLog(@"Reachable!");
+    };
+    
+    // Internet is non reachable
+    self.internetReachable.unreachableBlock = ^(Reachability *reach)
+    {
+        NSLog(@"Unreachable!");
+    };
+    
+    [self.internetReachable startNotifier];
 }
 
 @end
