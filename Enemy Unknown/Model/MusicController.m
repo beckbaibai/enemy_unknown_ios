@@ -92,7 +92,7 @@
         NSLog(@"An audio error occurred: \"%@\"", audioError7);
     }
     else {
-        [dieplayer setNumberOfLoops: -1];
+        [flagcapplayer setNumberOfLoops: -1];
     }
     NSString *soundFilePath8 = [[NSBundle mainBundle] pathForResource:@"gothit" ofType:@"mp3"];
     NSData *sampleData8 = [[NSData alloc] initWithContentsOfFile:soundFilePath8];
@@ -102,7 +102,7 @@
         NSLog(@"An audio error occurred: \"%@\"", audioError8);
     }
     else {
-        [dieplayer setNumberOfLoops: 1];
+        [gothitplayer setNumberOfLoops: 1];
     }
     NSString *soundFilePath9 = [[NSBundle mainBundle] pathForResource:@"kill" ofType:@"mp3"];
     NSData *sampleData9 = [[NSData alloc] initWithContentsOfFile:soundFilePath9];
@@ -112,7 +112,7 @@
         NSLog(@"An audio error occurred: \"%@\"", audioError9);
     }
     else {
-        [dieplayer setNumberOfLoops: 1];
+        [killplayer setNumberOfLoops: 1];
     }
     NSString *soundFilePath10 = [[NSBundle mainBundle] pathForResource:@"ko" ofType:@"mp3"];
     NSData *sampleData10 = [[NSData alloc] initWithContentsOfFile:soundFilePath10];
@@ -122,7 +122,7 @@
         NSLog(@"An audio error occurred: \"%@\"", audioError10);
     }
     else {
-        [dieplayer setNumberOfLoops: 1];
+        [koplayer setNumberOfLoops: 1];
     }
 
     self.inGameSounds  = [[NSDictionary alloc] initWithObjectsAndKeys:
