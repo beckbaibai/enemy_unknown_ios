@@ -44,8 +44,9 @@
     [super viewDidLoad];
     
     self.scenarioArray = [self scenarios];
-    //TODO
-    self.hasAds = YES;
+    NSUserDefaults *storage = [NSUserDefaults standardUserDefaults];
+    BOOL bought = [storage boolForKey:@"EnemyUnknownAdFree"];
+    self.hasAds = !bought;
     self.adView.hidden = YES;
 }
 

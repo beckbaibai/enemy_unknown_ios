@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MusicController.h"
+#import "PaymentQueueObserver.h"
 
 @interface EnemyUnknownAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) MusicController *musicPlayer;
+@property (strong, nonatomic) PaymentQueueObserver *pqObserver;
+
 @end

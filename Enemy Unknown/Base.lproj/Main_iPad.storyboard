@@ -400,26 +400,26 @@
                                     <action selector="back:" destination="cKP-Dz-92I" eventType="touchUpInside" id="F8W-tJ-bEE"/>
                                 </connections>
                             </button>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="id7-JZ-fhx">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="id7-JZ-fhx">
                                 <rect key="frame" x="186" y="117" width="655" height="419"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Item For Purchase" selectionStyle="default" indentationWidth="10" textLabel="h73-TB-uY0" detailTextLabel="NX2-jE-c3Q" style="IBUITableViewCellStyleSubtitle" id="3bu-vV-LJn">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Item For Purchase" selectionStyle="none" indentationWidth="10" reuseIdentifier="Item For Purchase" textLabel="UbS-yM-6Kf" detailTextLabel="x18-yl-ZP6" style="IBUITableViewCellStyleSubtitle" id="3bu-vV-LJn">
                                         <rect key="frame" x="0.0" y="22" width="655" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3bu-vV-LJn" id="oZX-ZM-nZW">
                                             <rect key="frame" x="0.0" y="0.0" width="655" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h73-TB-uY0">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UbS-yM-6Kf">
                                                     <rect key="frame" x="15" y="3" width="34" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NX2-jE-c3Q">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x18-yl-ZP6">
                                                     <rect key="frame" x="15" y="25" width="43" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
