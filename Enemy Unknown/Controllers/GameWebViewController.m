@@ -135,6 +135,10 @@
 -(void)gameWon:(BOOL) iWon
 {
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AVAudioPlayer *backgroundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:@"background"];
+    [backgroundPlayer stop];
+    AVAudioPlayer *flagcapPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:@"flagcap"];
+    [flagcapPlayer stop];
     [appDelegate.musicPlayer.menuPlayer play];
     self.iWon = iWon;
     [self performSegueWithIdentifier: @"End Game"

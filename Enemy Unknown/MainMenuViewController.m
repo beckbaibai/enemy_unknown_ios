@@ -81,7 +81,6 @@
 
 - (void)showGameCenter
 {
-    [self authenticateLocalPlayer];
     GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
     if (gameCenterController != nil)
     {

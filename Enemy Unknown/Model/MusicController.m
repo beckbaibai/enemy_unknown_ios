@@ -132,7 +132,7 @@
                           attack2player,@"attack2",
                           backgroundplayer,@"background",
                           dieplayer,@"die",
-                          flagcapplayer,@"die",
+                          flagcapplayer,@"flagcap",
                           gothitplayer,@"gothit",
                           killplayer,@"kill",
                           koplayer,@"ko",
