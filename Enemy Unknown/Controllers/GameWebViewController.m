@@ -45,7 +45,7 @@
     
     self.json = [[SBJsonParser alloc] init];
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate.musicPlayer.menuPlayer pause];
+    [appDelegate.musicPlayer initInGameSound];
 //    // Delay execution of my block for 10 seconds.
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
 //        appDelegate.musicPlayer.menuPlayer.volume = 0.8;
@@ -110,21 +110,32 @@
         
         NSLog(@"hasFinishedLoading called");
         [self hasFinishedLoading];
+    }else if ([functionName isEqualToString:@"playSound"]) {
+        NSLog(@"playSound called");
+        [self playSound:(NSString *)args[0]];
+        
+    }
+    else if ([functionName isEqualToString:@"stopSound"]) {
+        NSLog(@"stopSound called");
+        [self stopSound:(NSString *)args[0]];
     
-    } else {
+    }else {
         NSLog(@"Unimplemented method '%@'", functionName);
     }
 }
 
 - (void)hasFinishedLoading
 {
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer stop];
     [self.loadingImageView setHidden:YES];
-  //  [self gameWon:YES];
 }
 
 
 -(void)gameWon:(BOOL) iWon
 {
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.musicPlayer.menuPlayer play];
     self.iWon = iWon;
     [self performSegueWithIdentifier: @"End Game"
                               sender: self];
@@ -138,11 +149,17 @@
 }
 
 -(void)playSound:(NSString *)sound{
+    NSLog(@"%@",sound);
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AVAudioPlayer *soundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:sound];
+    [soundPlayer play];
     
 }
 
 -(void)stopSound:(NSString *)sound{
-    
+    EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AVAudioPlayer *soundPlayer = [appDelegate.musicPlayer.inGameSounds objectForKey:sound];
+    [soundPlayer stop];
 }
 
 @end
