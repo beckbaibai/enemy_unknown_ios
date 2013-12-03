@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) NSArray *products;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (nonatomic, strong) SKProductsRequest *request;
 @property (nonatomic, strong) UIImage *purchaseImage;
 
@@ -62,6 +63,7 @@
     self.purchaseImage = [UIImage imageWithData:fileData];
     
     [self.tableView reloadData];
+    self.loadingLabel.hidden = YES;
     self.tableView.hidden = NO;
 }
 
