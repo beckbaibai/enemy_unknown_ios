@@ -17,7 +17,7 @@
 
 @interface InAppPurchaseViewController () <SKProductsRequestDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *products;
+@property (nonatomic, strong) NSMutableArray *products;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (nonatomic, strong) SKProductsRequest *request;
@@ -56,11 +56,13 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.rowHeight = 100;
-    
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"purchase" ofType:@"png"];
+      
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"noad" ofType:@"png"];
     NSURL *fileURL = [NSURL fileURLWithPath:filepath];
     NSData *fileData = [NSData dataWithContentsOfURL:fileURL];
     self.purchaseImage = [UIImage imageWithData:fileData];
+    
+    
     
     [self.tableView reloadData];
     self.loadingLabel.hidden = YES;
@@ -136,7 +138,8 @@
 - (void) productsRequest:(SKProductsRequest *)request
      didReceiveResponse:(SKProductsResponse *)response
 {
-    self.products = response.products;
+    
+    self.products = [[NSMutableArray alloc] initWithArray:response.products];
     
     for (NSString *invalidId in response.invalidProductIdentifiers) {
         // handle invalid id
@@ -156,7 +159,7 @@ didFailWithError:(NSError *)error
 - (NSInteger) tableView:(UITableView *)tableView
   numberOfRowsInSection:(NSInteger)section
 {
-    return [self.products count];
+    return [self.products count]+1;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView
@@ -167,13 +170,33 @@ didFailWithError:(NSError *)error
                                                                  forIndexPath:indexPath];
     NSInteger row = [indexPath row];
     
+    if(row>=[self.products count]){
+        // configure cell
+        cell.textLabel.text = @"Coming soon . . .";
+        [cell.textLabel setFont:[UIFont fontWithName:@"Copperplate" size:20]];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.detailTextLabel.text = @"More products are on there way.";
+        [cell.detailTextLabel setFont:[UIFont fontWithName:@"Copperplate" size:12]];
+        cell.detailTextLabel.textColor = [UIColor whiteColor];
+        NSString *filepath1 = [[NSBundle mainBundle] pathForResource:@"comingsoon" ofType:@"png"];
+        NSURL *fileURL1 = [NSURL fileURLWithPath:filepath1];
+        NSData *fileData1 = [NSData dataWithContentsOfURL:fileURL1];
+        cell.imageView.image = [UIImage imageWithData:fileData1];
+    }
+    
+    
     // configure cell
     cell.textLabel.text = ((SKProduct *)self.products[row]).localizedTitle;
+    [cell.textLabel setFont:[UIFont fontWithName:@"Copperplate" size:20]];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.text = ((SKProduct *)self.products[row]).localizedDescription;
+    [cell.detailTextLabel setFont:[UIFont fontWithName:@"Copperplate" size:12]];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     
     UIButton *buyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [buyButton.titleLabel setFont:[UIFont fontWithName:@"Copperplate" size:14]];
+    
+    buyButton.titleLabel.textColor = [UIColor whiteColor];
     NSUserDefaults *storage = [NSUserDefaults standardUserDefaults];
     BOOL bought = [storage boolForKey:((SKProduct *)self.products[row]).productIdentifier];
     if (!bought) {

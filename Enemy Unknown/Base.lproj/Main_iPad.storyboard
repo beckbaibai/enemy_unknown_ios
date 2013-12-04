@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gnl-xc-DFo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Main Menu View Controller - Game Menu-->
@@ -324,7 +324,7 @@
                                 </connections>
                             </scrollView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-Bd-9s5">
-                                <rect key="frame" x="427" y="76" width="171" height="28"/>
+                                <rect key="frame" x="164" y="73" width="698" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,6 +336,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="L2V-Vv-tCs"/>
                     <connections>
+                        <outlet property="label" destination="eXF-Bd-9s5" id="fS7-yH-CQa"/>
                         <outlet property="pageControl" destination="vrB-50-bdW" id="Ry8-YP-eZc"/>
                         <outlet property="scrollView" destination="eec-o5-x8O" id="TvA-RQ-cRi"/>
                     </connections>

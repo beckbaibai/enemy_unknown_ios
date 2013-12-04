@@ -27,6 +27,8 @@
 		011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD31836962900463BBF /* AudioToolbox.framework */; };
 		011D6FDA183697CC00463BBF /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 011D6FD51836972E00463BBF /* menu.mp3 */; };
 		011D6FDD1836987100463BBF /* MusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011D6FDC1836987100463BBF /* MusicController.m */; };
+		0126C3DB184EBA47005342F9 /* noad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0126C3DA184EBA47005342F9 /* noad.png */; };
+		0126C3DD184EC3B5005342F9 /* comingsoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0126C3DC184EC3B5005342F9 /* comingsoon.png */; };
 		0126FEF5183C23DE008476F0 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEF4183C23DE008476F0 /* InAppPurchaseViewController.m */; };
 		0126FEF8183C2AC0008476F0 /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEF7183C2AC0008476F0 /* HowToPlayViewController.m */; };
 		0126FEFB183C2D0D008476F0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0126FEFA183C2D0D008476F0 /* AboutViewController.m */; };
@@ -96,6 +98,8 @@
 		011D6FD51836972E00463BBF /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../menu.mp3; sourceTree = "<group>"; };
 		011D6FDB1836987100463BBF /* MusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicController.h; path = Model/MusicController.h; sourceTree = "<group>"; };
 		011D6FDC1836987100463BBF /* MusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicController.m; path = Model/MusicController.m; sourceTree = "<group>"; };
+		0126C3DA184EBA47005342F9 /* noad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noad.png; path = ../noad.png; sourceTree = "<group>"; };
+		0126C3DC184EC3B5005342F9 /* comingsoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comingsoon.png; path = ../comingsoon.png; sourceTree = "<group>"; };
 		0126FEF3183C23DE008476F0 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchaseViewController.h; path = Controllers/InAppPurchaseViewController.h; sourceTree = "<group>"; };
 		0126FEF4183C23DE008476F0 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InAppPurchaseViewController.m; path = Controllers/InAppPurchaseViewController.m; sourceTree = "<group>"; };
 		0126FEF6183C2AC0008476F0 /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HowToPlayViewController.h; path = Controllers/HowToPlayViewController.h; sourceTree = "<group>"; };
@@ -192,11 +196,11 @@
 		010CED0E183C4AAE00764A39 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				014BD248183FF76F00863D62 /* howtoplaycamera.gif */,
 				8CAEA554184C52FC00BE62BF /* purchase.png */,
-				014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */,
 				8C258151183959A2001D56B9 /* loading.jpg */,
 				010CED0A183C4AA300764A39 /* youlose.png */,
+				0126C3DC184EC3B5005342F9 /* comingsoon.png */,
+				0126C3DA184EBA47005342F9 /* noad.png */,
 				010CED0B183C4AA300764A39 /* youwin1.png */,
 				8CAEA548184C3E3300BE62BF /* bottomRow.png */,
 				8CAEA549184C3E3300BE62BF /* gradientBackground.png */,
@@ -408,6 +412,8 @@
 		8C94DA62182C7F61004F8D22 /* gifs */ = {
 			isa = PBXGroup;
 			children = (
+				014BD248183FF76F00863D62 /* howtoplaycamera.gif */,
+				014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */,
 				8C94DA67182C8324004F8D22 /* logo.gif */,
 			);
 			name = gifs;
@@ -495,12 +501,14 @@
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
 				8CAEA54D184C3E3300BE62BF /* bottomRow.png in Resources */,
 				014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */,
+				0126C3DD184EC3B5005342F9 /* comingsoon.png in Resources */,
 				014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */,
 				011D6FDA183697CC00463BBF /* menu.mp3 in Resources */,
 				010CED0C183C4AA300764A39 /* youlose.png in Resources */,
 				010CED0D183C4AA300764A39 /* youwin1.png in Resources */,
 				8CAEA551184C3E3300BE62BF /* topRow.png in Resources */,
 				8CAEA54F184C3E3300BE62BF /* middleRow.png in Resources */,
+				0126C3DB184EBA47005342F9 /* noad.png in Resources */,
 				0111250B18297E3400254757 /* Main_iPad.storyboard in Resources */,
 				8C94DA68182C8324004F8D22 /* logo.gif in Resources */,
 				8CAEA555184C52FC00BE62BF /* purchase.png in Resources */,

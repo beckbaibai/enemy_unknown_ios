@@ -36,29 +36,33 @@
                 if (scores != nil) {
                    wins = ((GKScore*)[scores objectAtIndex:0]).value;
                 }
+                
                 if(self.iWon){
-                    wins = wins +1;
+                    wins = wins + 1;
+                    
                     [self reportScore:wins forLeaderboardID:@"EnemyUnknownWins"];
-                    if(wins>=1){
-                        [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
-                    }
-                    if(wins>=5){
-                        [self reportAchievement:@"EnemyUnknownWin10Games" percentComplete:50.0];
-                    }
-                    if(wins>=10){
-                        [self reportAchievement:@"EnemyUnknownWin10Games" percentComplete:100.0];
-                    }
-                    if(wins>=25){
-                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:25.0];
-                    }
-                    if(wins>=50){
-                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:50.0];
-                    }
-                    if(wins>=75){
-                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:75.0];
-                    }
+                    
                     if(wins>=100){
                         [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:100.0];
+                    }
+                    else if(wins>=75){
+                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:75.0];
+                    }
+                    else if(wins>=50){
+                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:50.0];
+                    }
+                    else if(wins>=25){
+                        [self reportAchievement:@"EnemyUnknownWin100Games" percentComplete:25.0];
+                    }
+                    else if(wins>=10){
+                        NSLog(@"%ld",(long)wins);
+                        [self reportAchievement:@"EnemyUnknownWin10Games" percentComplete:100.0];
+                    }
+                    else if(wins>=5){
+                        [self reportAchievement:@"EnemyUnknownWin10Games" percentComplete:50.0];
+                    }
+                    else if(wins>=1){
+                        [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
                     }
                 }
             }];
@@ -73,7 +77,7 @@
             
         
     }
-    [self reportAchievement:@"EnemyUnknownWinAGame" percentComplete:100.0];
+    
     
     if(self.iWon){
         NSString *filepath = [[NSBundle mainBundle] pathForResource:@"youwin1" ofType:@"png"];

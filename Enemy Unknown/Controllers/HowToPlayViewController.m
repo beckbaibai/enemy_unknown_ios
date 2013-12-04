@@ -8,10 +8,13 @@
 
 #import "HowToPlayViewController.h"
 #import "OLImage.h"
+#import "OLImageView.h"
 
-@interface HowToPlayViewController ()
+@interface HowToPlayViewController () <UIScrollViewDelegate>
 @property (nonatomic, strong) NSArray *pageImages;
 @property (nonatomic, strong) NSMutableArray *pageViews;
+@property (strong, nonatomic) IBOutlet UILabel *label;
+@property bool pageControlUsed;
 @end
 
 @implementation HowToPlayViewController
@@ -24,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.pageControlUsed = NO;
     NSString *filepath1 = [[NSBundle mainBundle] pathForResource:@"howtoplaycamera" ofType:@"gif"];
     NSURL *fileURL1 = [NSURL fileURLWithPath:filepath1];
     NSData *fileData1 = [NSData dataWithContentsOfURL:fileURL1];
@@ -37,7 +40,6 @@
                        howToPlayCamera,
                        howToPlayMoveAttack,
                        nil];
-    
     NSInteger pageCount = self.pageImages.count;
 
     self.pageControl.currentPage = 0;
@@ -59,63 +61,51 @@
 }
 
 - (void)loadVisiblePages {
-    // First, determine which page is currently visible
     CGFloat pageWidth = self.scrollView.frame.size.width;
     NSInteger page = (NSInteger)floor((self.scrollView.contentOffset.x * 2.0f + pageWidth) / (pageWidth * 2.0f));
-    
-    // Update the page control
     self.pageControl.currentPage = page;
-    
-    // Work out which pages you want to load
+    if(page==0){
+        self.label.text =@"How to move camera";
+    }else{
+        self.label.text =@"How to move units and attack other units.";
+    }
     NSInteger firstPage = page - 1;
     NSInteger lastPage = page + 1;
-    
-    // Purge anything before the first page
     for (NSInteger i=0; i<firstPage; i++) {
         [self purgePage:i];
     }
-    
-	// Load pages in our range
+
     for (NSInteger i=firstPage; i<=lastPage; i++) {
         [self loadPage:i];
     }
     
-	// Purge anything after the last page
     for (NSInteger i=lastPage+1; i<self.pageImages.count; i++) {
         [self purgePage:i];
     }
 }
 - (void)loadPage:(NSInteger)page {
     if (page < 0 || page >= self.pageImages.count) {
-        // If it's outside the range of what you have to display, then do nothing
         return;
     }
-    
-    // 1
+
     UIView *pageView = [self.pageViews objectAtIndex:page];
     if ((NSNull*)pageView == [NSNull null]) {
-        // 2
         CGRect frame = self.scrollView.bounds;
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0.0f;
         
-        // 3
-        UIImageView *newPageView = [[UIImageView alloc] initWithImage:[self.pageImages objectAtIndex:page]];
+        UIImageView *newPageView = [[OLImageView alloc] initWithImage:[self.pageImages objectAtIndex:page]];
         newPageView.contentMode = UIViewContentModeScaleAspectFit;
         newPageView.frame = frame;
         [self.scrollView addSubview:newPageView];
-        // 4
         [self.pageViews replaceObjectAtIndex:page withObject:newPageView];
     }
 }
 
 - (void)purgePage:(NSInteger)page {
     if (page < 0 || page >= self.pageImages.count) {
-        // If it's outside the range of what you have to display, then do nothing
         return;
     }
-    
-    // Remove a page from the scroll view and reset the container array
     UIView *pageView = [self.pageViews objectAtIndex:page];
     if ((NSNull*)pageView != [NSNull null]) {
         [pageView removeFromSuperview];
@@ -123,19 +113,33 @@
     }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // Load the pages that are now on screen
-    [self loadVisiblePages];
+    if(self.pageControlUsed == NO){
+        [self loadVisiblePages];
+    }
 }
 
 - (IBAction)pageChanged:(UIPageControl *)sender {
-    // update the scroll view to the appropriate page
     CGRect frame;
     frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
     frame.origin.y = 0;
     frame.size = self.scrollView.frame.size;
+
+    self.pageControlUsed = YES;
     [self.scrollView scrollRectToVisible:frame animated:YES];
+    if(self.pageControl.currentPage==0){
+        self.label.text =@"How to move camera";
+    }else{
+        self.label.text =@"How to move units and attack other units.";
+    }
+    
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.pageControlUsed = NO;
+}
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.pageControlUsed = NO;
+}
 
 @end
