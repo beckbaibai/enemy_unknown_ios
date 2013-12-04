@@ -103,6 +103,24 @@
 
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"IAP"]) {
+        EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        Reachability *reachablity = appDelegate.internetReachable;
+        if (![reachablity isReachable]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                                            message:@"You must be connected to the Internet to purchase in-app items."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return NO;
+        }
+    }
+    return YES;
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
