@@ -29,7 +29,7 @@
     [super loadView];
     
     // Use OLImage and OLImageView instead of default UIImage and UIImageView in order to show gif
-    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 150, 400, 125)];
+    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 100, 400, 125)];
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
     NSURL *fileURL = [NSURL fileURLWithPath:filepath];
     NSData *logoData = [NSData dataWithContentsOfURL:fileURL];

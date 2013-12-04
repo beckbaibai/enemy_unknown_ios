@@ -15,6 +15,8 @@
 #import <StoreKit/SKPayment.h>
 #import <StoreKit/SKPaymentQueue.h>
 #import <StoreKit/SKPaymentTransaction.h>
+#import "OLImage.h"
+#import "OLImageView.h"
 
 @interface InAppPurchaseViewController () <SKProductsRequestDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -23,13 +25,31 @@
 @property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (nonatomic, strong) SKProductsRequest *request;
 @property (nonatomic, strong) UIImage *purchaseImage;
+@property (strong, nonatomic) IBOutlet UIImageView *logo;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end
 
 @implementation InAppPurchaseViewController
 
+- (void)loadView
+{
+    [super loadView];
+    
+    // Use OLImage and OLImageView instead of default UIImage and UIImageView in order to show gif
+    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 100, 400, 125)];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
+    NSData *logoData = [NSData dataWithContentsOfURL:fileURL];
+    UIImage *logoImage = [OLImage imageWithData:logoData];
+    self.logo.image = logoImage;
+    [self.view addSubview:self.logo];
+}
+
 - (void) viewDidLoad
 {
+    [self.activity startAnimating];
+    self.activity.hidesWhenStopped = YES;
     // register transaction observer
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     PaymentQueueObserver *pqObserver = appDelegate.pqObserver;
@@ -87,6 +107,7 @@
     
     [self.tableView reloadData];
     self.loadingLabel.hidden = YES;
+    [self.activity stopAnimating];
     self.tableView.hidden = NO;
 }
 
@@ -196,14 +217,14 @@ didFailWithError:(NSError *)error
         cell.textLabel.text = @"Coming soon . . .";
         [cell.textLabel setFont:[UIFont fontWithName:@"Copperplate" size:20]];
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.detailTextLabel.text = @"More products are on there way.";
+        cell.detailTextLabel.text = @"More products are on their way.";
         [cell.detailTextLabel setFont:[UIFont fontWithName:@"Copperplate" size:12]];
         cell.detailTextLabel.textColor = [UIColor whiteColor];
         NSString *filepath1 = [[NSBundle mainBundle] pathForResource:@"comingsoon" ofType:@"png"];
         NSURL *fileURL1 = [NSURL fileURLWithPath:filepath1];
         NSData *fileData1 = [NSData dataWithContentsOfURL:fileURL1];
         cell.imageView.image = [UIImage imageWithData:fileData1];
-    }
+    }else{
     
     
     // configure cell
@@ -235,7 +256,7 @@ didFailWithError:(NSError *)error
     cell.accessoryView = buyButton;
     
     cell.imageView.image = self.purchaseImage;
-    
+    }
     return cell;
 }
 

@@ -14,11 +14,24 @@
 @property (nonatomic, strong) NSArray *pageImages;
 @property (nonatomic, strong) NSMutableArray *pageViews;
 @property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property bool pageControlUsed;
 @end
 
 @implementation HowToPlayViewController
-
+- (void)loadView
+{
+    [super loadView];
+    
+    // Use OLImage and OLImageView instead of default UIImage and UIImageView in order to show gif
+    self.logo = [[OLImageView alloc] initWithFrame:CGRectMake(312, 100, 400, 125)];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"logo" ofType:@"gif"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
+    NSData *logoData = [NSData dataWithContentsOfURL:fileURL];
+    UIImage *logoImage = [OLImage imageWithData:logoData];
+    self.logo.image = logoImage;
+    [self.view addSubview:self.logo];
+}
 
 
 - (IBAction)back:(UIButton *)sender {

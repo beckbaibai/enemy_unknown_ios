@@ -23,6 +23,9 @@
 		0111252F18298AE800254757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0111252E18298AE800254757 /* MediaPlayer.framework */; };
 		0111253F18299A5200254757 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111253D18299A5200254757 /* TrailerViewController.m */; };
 		011125461829A4F100254757 /* demo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 011125451829A4F100254757 /* demo.m4v */; };
+		0118C416184ECF7E009C45D2 /* fast.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118C413184ECF7E009C45D2 /* fast.png */; };
+		0118C417184ECF7E009C45D2 /* multiplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118C414184ECF7E009C45D2 /* multiplayer.png */; };
+		0118C418184ECF7E009C45D2 /* strategic.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118C415184ECF7E009C45D2 /* strategic.png */; };
 		011D6FD21836955A00463BBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD11836955A00463BBF /* AVFoundation.framework */; };
 		011D6FD41836962900463BBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011D6FD31836962900463BBF /* AudioToolbox.framework */; };
 		011D6FDA183697CC00463BBF /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 011D6FD51836972E00463BBF /* menu.mp3 */; };
@@ -95,6 +98,9 @@
 		0111253C18299A5200254757 /* TrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrailerViewController.h; path = Controllers/TrailerViewController.h; sourceTree = "<group>"; };
 		0111253D18299A5200254757 /* TrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrailerViewController.m; path = Controllers/TrailerViewController.m; sourceTree = "<group>"; };
 		011125451829A4F100254757 /* demo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.m4v; path = Videos/demo.m4v; sourceTree = "<group>"; };
+		0118C413184ECF7E009C45D2 /* fast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fast.png; path = ../fast.png; sourceTree = "<group>"; };
+		0118C414184ECF7E009C45D2 /* multiplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = multiplayer.png; path = ../multiplayer.png; sourceTree = "<group>"; };
+		0118C415184ECF7E009C45D2 /* strategic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = strategic.png; path = ../strategic.png; sourceTree = "<group>"; };
 		011D6FD11836955A00463BBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		011D6FD31836962900463BBF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		011D6FD51836972E00463BBF /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../menu.mp3; sourceTree = "<group>"; };
@@ -206,6 +212,9 @@
 				8C258151183959A2001D56B9 /* loading.jpg */,
 				010CED0A183C4AA300764A39 /* youlose.png */,
 				0126C3DC184EC3B5005342F9 /* comingsoon.png */,
+				0118C413184ECF7E009C45D2 /* fast.png */,
+				0118C414184ECF7E009C45D2 /* multiplayer.png */,
+				0118C415184ECF7E009C45D2 /* strategic.png */,
 				0126C3DA184EBA47005342F9 /* noad.png */,
 				010CED0B183C4AA300764A39 /* youwin1.png */,
 				8CAEA548184C3E3300BE62BF /* bottomRow.png */,
@@ -515,6 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAEA550184C3E3300BE62BF /* topAndBottomRow.png in Resources */,
+				0118C416184ECF7E009C45D2 /* fast.png in Resources */,
+				0118C417184ECF7E009C45D2 /* multiplayer.png in Resources */,
+				0118C418184ECF7E009C45D2 /* strategic.png in Resources */,
 				8C258152183959A2001D56B9 /* loading.jpg in Resources */,
 				8CAEA54D184C3E3300BE62BF /* bottomRow.png in Resources */,
 				014BD24A183FF76F00863D62 /* howtoplaycamera.gif in Resources */,

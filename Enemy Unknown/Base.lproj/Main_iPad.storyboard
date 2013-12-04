@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-7Q-r2X">
-                                <rect key="frame" x="312" y="187" width="400" height="125"/>
+                                <rect key="frame" x="312" y="100" width="400" height="125"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fZ-hN-3V6">
-                                <rect key="frame" x="409" y="370" width="204" height="62"/>
+                                <rect key="frame" x="409" y="300" width="204" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Play Game">
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-vu-h3f">
-                                <rect key="frame" x="394" y="510" width="235" height="62"/>
+                                <rect key="frame" x="394" y="450" width="235" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Game Center">
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuY-w9-H2g">
-                                <rect key="frame" x="381" y="580" width="261" height="62"/>
+                                <rect key="frame" x="381" y="525" width="261" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="In-app Purchase">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVz-vw-mNU">
-                                <rect key="frame" x="381" y="440" width="263" height="62"/>
+                                <rect key="frame" x="381" y="375" width="263" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="How to play">
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sij-lI-ZjI">
-                                <rect key="frame" x="381" y="650" width="261" height="62"/>
+                                <rect key="frame" x="381" y="600" width="261" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="About">
@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKc-TM-x5e">
-                                <rect key="frame" x="465" y="580" width="107" height="55"/>
+                                <rect key="frame" x="465" y="575" width="107" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Start!">
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVo-ar-SgS">
-                                <rect key="frame" x="465" y="643" width="107" height="55"/>
+                                <rect key="frame" x="465" y="650" width="107" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Back">
@@ -164,7 +164,7 @@
                                 </connections>
                             </adBannerView>
                             <pickerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-cR-wNj">
-                                <rect key="frame" x="0.0" y="333" width="1024" height="216"/>
+                                <rect key="frame" x="0.0" y="300" width="1024" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,14 +174,14 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a scenario:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-nV-epd">
-                                <rect key="frame" x="432" y="297" width="171" height="28"/>
+                                <rect key="frame" x="427" y="250" width="171" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AhD-SQ-AI3">
-                                <rect key="frame" x="318" y="150" width="400" height="126"/>
+                                <rect key="frame" x="318" y="100" width="400" height="126"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99I-Io-bQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-232"/>
+            <point key="canvasLocation" x="712" y="-232"/>
         </scene>
         <!--Game Web View Controller - Scenario-->
         <scene sceneID="TzU-LU-pOW">
@@ -296,7 +296,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDl-pL-bYy">
-                                <rect key="frame" x="459" y="621" width="107" height="55"/>
+                                <rect key="frame" x="459" y="650" width="107" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Back">
@@ -308,7 +308,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="vrB-50-bdW">
-                                <rect key="frame" x="493" y="557" width="39" height="37"/>
+                                <rect key="frame" x="493" y="600" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -316,14 +316,18 @@
                                 </connections>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eec-o5-x8O">
-                                <rect key="frame" x="186" y="117" width="655" height="419"/>
+                                <rect key="frame" x="212" y="300" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="9vv-Us-TCt" id="E9U-3e-lzo"/>
                                 </connections>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-0J-yEf">
+                                <rect key="frame" x="312" y="100" width="400" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-Bd-9s5">
-                                <rect key="frame" x="164" y="73" width="698" height="28"/>
+                                <rect key="frame" x="163" y="250" width="698" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,6 +340,7 @@
                     <navigationItem key="navigationItem" id="L2V-Vv-tCs"/>
                     <connections>
                         <outlet property="label" destination="eXF-Bd-9s5" id="fS7-yH-CQa"/>
+                        <outlet property="logo" destination="keQ-0J-yEf" id="mhD-5b-MnJ"/>
                         <outlet property="pageControl" destination="vrB-50-bdW" id="Ry8-YP-eZc"/>
                         <outlet property="scrollView" destination="eec-o5-x8O" id="TvA-RQ-cRi"/>
                     </connections>
@@ -357,11 +362,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUx-Wy-MQb">
-                                <rect key="frame" x="243" y="89" width="539" height="433"/>
+                                <rect key="frame" x="312" y="250" width="400" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-uA-gYC">
-                                <rect key="frame" x="426" y="570" width="172" height="55"/>
+                                <rect key="frame" x="426" y="575" width="172" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Play again">
@@ -373,7 +378,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-wW-DbS">
-                                <rect key="frame" x="425" y="626" width="174" height="55"/>
+                                <rect key="frame" x="425" y="650" width="174" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Main Menu">
@@ -384,6 +389,10 @@
                                     <action selector="mainMenu:" destination="HZq-j6-3Sj" eventType="touchUpInside" id="1et-49-I2R"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNd-43-OBw">
+                                <rect key="frame" x="312" y="100" width="400" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -391,6 +400,7 @@
                     <navigationItem key="navigationItem" id="tdG-pX-JWs"/>
                     <connections>
                         <outlet property="didWinImage" destination="SUx-Wy-MQb" id="sE1-fx-syn"/>
+                        <outlet property="logo" destination="uNd-43-OBw" id="8nc-Z1-6Zz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFv-za-cWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,8 +443,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYR-1W-R2E">
-                                <rect key="frame" x="459" y="570" width="107" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYR-1W-R2E">
+                                <rect key="frame" x="473" y="650" width="77" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Back">
@@ -445,10 +455,13 @@
                                     <action selector="back:" destination="cKP-Dz-92I" eventType="touchUpInside" id="F8W-tJ-bEE"/>
                                 </connections>
                             </button>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="id7-JZ-fhx">
-                                <rect key="frame" x="186" y="117" width="655" height="419"/>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="id7-JZ-fhx">
+                                <rect key="frame" x="184" y="300" width="655" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ey9-4R-wN2"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="Item For Purchase" selectionStyle="none" indentationWidth="10" reuseIdentifier="Item For Purchase" textLabel="UbS-yM-6Kf" detailTextLabel="x18-yl-ZP6" style="IBUITableViewCellStyleSubtitle" id="3bu-vV-LJn">
                                         <rect key="frame" x="0.0" y="22" width="655" height="44"/>
@@ -476,21 +489,53 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Product Data..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-9h-W16">
-                                <rect key="frame" x="185" y="267" width="655" height="93"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-PO-H4H">
+                                <rect key="frame" x="312" y="100" width="400" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="gjZ-YA-zWa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Product Data..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-9h-W16">
+                                <rect key="frame" x="184" y="300" width="655" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="655" id="ZD6-EG-eEC"/>
+                                    <constraint firstAttribute="height" constant="93" id="lT3-A2-Z8x"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eJU-qf-NXt">
+                                <rect key="frame" x="184" y="450" width="655" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="trailing" secondItem="eJU-qf-NXt" secondAttribute="trailing" id="9Lh-xl-bhQ"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="leading" secondItem="id7-JZ-fhx" secondAttribute="leading" id="HXy-dv-Iiu"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="centerX" secondItem="J2b-PO-H4H" secondAttribute="centerX" id="MM9-cJ-t4S"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="trailing" secondItem="id7-JZ-fhx" secondAttribute="trailing" id="P2m-x1-36G"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="leading" secondItem="eJU-qf-NXt" secondAttribute="leading" id="R4h-iH-kTS"/>
+                            <constraint firstItem="J2b-PO-H4H" firstAttribute="top" secondItem="nOQ-i7-xD6" secondAttribute="bottom" constant="80" id="bCd-xD-m6U"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="top" secondItem="J2b-PO-H4H" secondAttribute="bottom" constant="75" id="c79-mi-CCD"/>
+                            <constraint firstItem="eJU-qf-NXt" firstAttribute="top" secondItem="ImG-9h-W16" secondAttribute="bottom" constant="57" id="eUa-qe-cOT"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="centerX" secondItem="mYR-1W-R2E" secondAttribute="centerX" id="f5M-Cd-Hwa"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="top" secondItem="kB5-w0-Z49" secondAttribute="top" constant="300" id="iIn-fx-VuI"/>
+                            <constraint firstItem="ImG-9h-W16" firstAttribute="top" secondItem="id7-JZ-fhx" secondAttribute="top" id="oC2-aX-9er"/>
+                            <constraint firstItem="mYR-1W-R2E" firstAttribute="top" secondItem="id7-JZ-fhx" secondAttribute="bottom" constant="50" id="qCX-jG-Tdn"/>
+                            <constraint firstAttribute="centerX" secondItem="ImG-9h-W16" secondAttribute="centerX" id="xGg-DL-Zm1"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ez2-nf-1vf"/>
                     <connections>
+                        <outlet property="activity" destination="eJU-qf-NXt" id="WeB-AM-eOu"/>
                         <outlet property="loadingLabel" destination="ImG-9h-W16" id="ABt-yU-hqN"/>
+                        <outlet property="logo" destination="J2b-PO-H4H" id="j9g-NG-4rW"/>
                         <outlet property="tableView" destination="id7-JZ-fhx" id="LjS-IH-fOF"/>
                     </connections>
                 </viewController>
@@ -511,7 +556,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYi-1b-36r">
-                                <rect key="frame" x="459" y="625" width="107" height="55"/>
+                                <rect key="frame" x="459" y="650" width="107" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <state key="normal" title="Back">
@@ -522,17 +567,83 @@
                                     <action selector="back:" destination="sSJ-7z-Jcb" eventType="touchUpInside" id="pEp-yx-CTZ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fast.png" translatesAutoresizingMaskIntoConstraints="NO" id="VrZ-v3-idA">
+                                <rect key="frame" x="200" y="300" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="multiplayer.png" translatesAutoresizingMaskIntoConstraints="NO" id="Goc-7G-LAh">
+                                <rect key="frame" x="200" y="400" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strategic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Swk-Fu-1Gb">
+                                <rect key="frame" x="200" y="500" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOW-CZ-HNz">
+                                <rect key="frame" x="312" y="100" width="400" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fast Paced" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-td-hCT">
+                                <rect key="frame" x="258" y="314" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7D-dn-k0H">
+                                <rect key="frame" x="258" y="414" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strategic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-wV-tCO">
+                                <rect key="frame" x="258" y="514" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open an app or browser and play a game of this action packed real time strategy game in minutes." lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="402" translatesAutoresizingMaskIntoConstraints="NO" id="STl-t9-9ry">
+                                <rect key="frame" x="459" y="280" width="402" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play against your friends online!" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="396" translatesAutoresizingMaskIntoConstraints="NO" id="uoU-NR-dCF">
+                                <rect key="frame" x="459" y="380" width="396" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asymetric information, objectives, formations, and more allow strategic depth and massize replay value. " lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="402" translatesAutoresizingMaskIntoConstraints="NO" id="2sQ-6a-LYf">
+                                <rect key="frame" x="459" y="480" width="402" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tp5-sD-7nJ"/>
+                    <connections>
+                        <outlet property="logo" destination="kOW-CZ-HNz" id="qSR-fv-X7v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFJ-uf-Esp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="2647"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fast.png" width="200" height="200"/>
+        <image name="multiplayer.png" width="200" height="200"/>
+        <image name="strategic.png" width="200" height="200"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>
