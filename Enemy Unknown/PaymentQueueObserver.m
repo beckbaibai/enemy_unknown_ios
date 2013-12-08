@@ -13,6 +13,9 @@
 
 @implementation PaymentQueueObserver
 
+/**
+ * When a transaction begins, send a notification.
+ */
 - (void)beginTransaction:(SKPaymentTransaction *)transaction
 {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:transaction, @"transaction", nil];
@@ -21,6 +24,9 @@
                                                       userInfo:userInfo];
 }
 
+/**
+ * When a transaction succeeds, persist the purchase and finish this transaction.
+ */
 - (void)completeTransaction:(SKPaymentTransaction *)transaction
 {
     // persist the purchase
@@ -32,12 +38,19 @@
     [self finishTransaction:transaction wasSuccessful:YES];
 }
 
-- (void)failedTransaction:(SKPaymentTransaction *)transaction
+/**
+ * When a transaction fails, finish this transaction.
+ */
+- (void)failTransaction:(SKPaymentTransaction *)transaction
 {
     NSLog(@"%@", transaction.error.description);
     [self finishTransaction:transaction wasSuccessful:NO];
 }
 
+/**
+ * Finish a transaction by removing it from payment queue and send a notification about
+ * whether it was successful or not.
+ */
 - (void)finishTransaction:(SKPaymentTransaction *)transaction
             wasSuccessful:(BOOL)wasSuccessful
 {
@@ -68,7 +81,7 @@
                 [self completeTransaction:transaction];
                 break;
             case SKPaymentTransactionStateFailed:
-                [self failedTransaction:transaction];
+                [self failTransaction:transaction];
                 break;
             case SKPaymentTransactionStatePurchasing:
                 [self beginTransaction:transaction];

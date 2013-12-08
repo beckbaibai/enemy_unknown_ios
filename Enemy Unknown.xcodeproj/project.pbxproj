@@ -44,7 +44,6 @@
 		014BD24B183FF76F00863D62 /* howtoplaymoveattack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 014BD249183FF76F00863D62 /* howtoplaymoveattack.gif */; };
 		8C258152183959A2001D56B9 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C258151183959A2001D56B9 /* loading.jpg */; };
 		8C25815418469EFF001D56B9 /* product_ids.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C25815318469EFF001D56B9 /* product_ids.plist */; };
-		8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */; };
 		8C94DA49182AF6EC004F8D22 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */; };
 		8C94DA4A182AF6EC004F8D22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA34182AF6EC004F8D22 /* SBJsonParser.m */; };
 		8C94DA4B182AF6EC004F8D22 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DA36182AF6EC004F8D22 /* SBJsonStreamParser.m */; };
@@ -135,8 +134,6 @@
 		01E304BF184AF71800ECBA63 /* ko.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ko.mp3; path = ../ko.mp3; sourceTree = "<group>"; };
 		8C258151183959A2001D56B9 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loading.jpg; path = ../loading.jpg; sourceTree = "<group>"; };
 		8C25815318469EFF001D56B9 /* product_ids.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = product_ids.plist; sourceTree = "<group>"; };
-		8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EUAdditions.h"; sourceTree = "<group>"; };
-		8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EUAdditions.m"; sourceTree = "<group>"; };
 		8C94DA30182AF6EC004F8D22 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		8C94DA31182AF6EC004F8D22 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		8C94DA32182AF6EC004F8D22 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -266,8 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				011125361829974200254757 /* Resources */,
-				8CAEA556184C5C4300BE62BF /* Observers */,
-				8C94DA2B182AD57F004F8D22 /* Categories */,
 				011D6FDE1836988500463BBF /* Models */,
 				0111253318298B6500254757 /* Controllers */,
 				0111250618297E3400254757 /* Main_iPhone.storyboard */,
@@ -358,19 +353,12 @@
 		011D6FDE1836988500463BBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8CAEA557184C5C9500BE62BF /* PaymentQueueObserver.h */,
+				8CAEA558184C5C9500BE62BF /* PaymentQueueObserver.m */,
 				011D6FDB1836987100463BBF /* MusicController.h */,
 				011D6FDC1836987100463BBF /* MusicController.m */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		8C94DA2B182AD57F004F8D22 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				8C94DA2C182AD60C004F8D22 /* UIWebView+EUAdditions.h */,
-				8C94DA2D182AD60C004F8D22 /* UIWebView+EUAdditions.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 		8C94DA2F182AF6EC004F8D22 /* SBJson */ = {
@@ -434,15 +422,6 @@
 				8C94DA67182C8324004F8D22 /* logo.gif */,
 			);
 			name = gifs;
-			sourceTree = "<group>";
-		};
-		8CAEA556184C5C4300BE62BF /* Observers */ = {
-			isa = PBXGroup;
-			children = (
-				8CAEA557184C5C9500BE62BF /* PaymentQueueObserver.h */,
-				8CAEA558184C5C9500BE62BF /* PaymentQueueObserver.m */,
-			);
-			name = Observers;
 			sourceTree = "<group>";
 		};
 		8CAEA55F184E906A00BE62BF /* Reachability */ = {
@@ -558,7 +537,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C94DA52182AF6EC004F8D22 /* SBJsonTokeniser.m in Sources */,
-				8C94DA2E182AD60C004F8D22 /* UIWebView+EUAdditions.m in Sources */,
 				0126FEF5183C23DE008476F0 /* InAppPurchaseViewController.m in Sources */,
 				0111250518297E3400254757 /* EnemyUnknownAppDelegate.m in Sources */,
 				010CED09183C42FA00764A39 /* EndGameViewController.m in Sources */,

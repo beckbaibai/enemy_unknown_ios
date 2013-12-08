@@ -10,7 +10,11 @@
 
 @implementation MusicController
 
--(void)initMenuPlayer{
+/**
+ * Initialize menu's background music.
+ */
+- (void)initMenuMusic
+{
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"mp3"];
     NSData *sampleData = [[NSData alloc] initWithContentsOfFile:soundFilePath];
     NSError *audioError = nil;
@@ -23,7 +27,12 @@
     }
 }
 
--(void)initInGameSound{
+/**
+ * Initialize in-game sounds.
+ * Scott Rixner says: when you are copying and pasting code, you know you are doing something wrong.
+ */
+- (void)initInGameSound
+{
     NSString *soundFilePath1 = [[NSBundle mainBundle] pathForResource:@"attack_1" ofType:@"mp3"];
     NSData *sampleData1 = [[NSData alloc] initWithContentsOfFile:soundFilePath1];
     NSError *audioError1 = nil;
@@ -34,6 +43,7 @@
     else {
         [attack_1player setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath2 = [[NSBundle mainBundle] pathForResource:@"attack_2" ofType:@"mp3"];
     NSData *sampleData2 = [[NSData alloc] initWithContentsOfFile:soundFilePath2];
     NSError *audioError2 = nil;
@@ -44,6 +54,7 @@
     else {
         [attack_2player setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath3 = [[NSBundle mainBundle] pathForResource:@"attack1" ofType:@"mp3"];
     NSData *sampleData3 = [[NSData alloc] initWithContentsOfFile:soundFilePath3];
     NSError *audioError3 = nil;
@@ -54,6 +65,7 @@
     else {
         [attack1player setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath4 = [[NSBundle mainBundle] pathForResource:@"attack2" ofType:@"mp3"];
     NSData *sampleData4 = [[NSData alloc] initWithContentsOfFile:soundFilePath4];
     NSError *audioError4 = nil;
@@ -64,6 +76,7 @@
     else {
         [attack2player setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath5 = [[NSBundle mainBundle] pathForResource:@"background" ofType:@"mp3"];
     NSData *sampleData5 = [[NSData alloc] initWithContentsOfFile:soundFilePath5];
     NSError *audioError5 = nil;
@@ -74,6 +87,7 @@
     else {
         [backgroundplayer setNumberOfLoops: -1];
     }
+    
     NSString *soundFilePath6 = [[NSBundle mainBundle] pathForResource:@"die" ofType:@"mp3"];
     NSData *sampleData6 = [[NSData alloc] initWithContentsOfFile:soundFilePath6];
     NSError *audioError6 = nil;
@@ -84,6 +98,7 @@
     else {
         [dieplayer setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath7 = [[NSBundle mainBundle] pathForResource:@"flagcap" ofType:@"mp3"];
     NSData *sampleData7 = [[NSData alloc] initWithContentsOfFile:soundFilePath7];
     NSError *audioError7 = nil;
@@ -94,6 +109,7 @@
     else {
         [flagcapplayer setNumberOfLoops: -1];
     }
+    
     NSString *soundFilePath8 = [[NSBundle mainBundle] pathForResource:@"gothit" ofType:@"mp3"];
     NSData *sampleData8 = [[NSData alloc] initWithContentsOfFile:soundFilePath8];
     NSError *audioError8 = nil;
@@ -104,6 +120,7 @@
     else {
         [gothitplayer setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath9 = [[NSBundle mainBundle] pathForResource:@"kill" ofType:@"mp3"];
     NSData *sampleData9 = [[NSData alloc] initWithContentsOfFile:soundFilePath9];
     NSError *audioError9 = nil;
@@ -114,6 +131,7 @@
     else {
         [killplayer setNumberOfLoops: 1];
     }
+    
     NSString *soundFilePath10 = [[NSBundle mainBundle] pathForResource:@"ko" ofType:@"mp3"];
     NSData *sampleData10 = [[NSData alloc] initWithContentsOfFile:soundFilePath10];
     NSError *audioError10 = nil;

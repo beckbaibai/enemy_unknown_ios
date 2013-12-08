@@ -9,8 +9,11 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface MusicController : NSObject
+
 @property (strong,nonatomic) AVAudioPlayer *menuPlayer;
 @property (strong,nonatomic) NSDictionary *inGameSounds;
--(void)initMenuPlayer;
+
+-(void)initMenuMusic;
 -(void)initInGameSound;
+
 @end

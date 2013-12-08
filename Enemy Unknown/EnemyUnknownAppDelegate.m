@@ -12,12 +12,20 @@
 
 @implementation EnemyUnknownAppDelegate
 
+/**
+ * In application:didFinishLaunchingWithOptions:, we do two things:
+ * 1. Initialize and start an Internet reachability notifier that would be used
+ *    by In-App Purchase and Game views, since they both requires Internet;
+ * 2. Register a payment queue observer for to handle transactions submitted
+ *    by In-App Purchase view.
+ */
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Start Internet reachability notifier
     [self testInternetConnection];
     
+    // Register a payment queue observer
     self.pqObserver = [[PaymentQueueObserver alloc] init];
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self.pqObserver];
     
@@ -51,8 +59,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-# pragma mark - Internet Connectection test
+# pragma mark - Internet Reachability test
 
+/**
+ * Initialize an instance of Reachability and start its notifier.
+ */
 - (void)testInternetConnection
 {
     self.internetReachable = [Reachability reachabilityWithHostname:@"www.google.com"];

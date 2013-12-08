@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HowToPlayViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 

@@ -11,16 +11,16 @@
 #import "OLImageView.h"
 
 @interface AboutViewController ()
+
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 
 @end
 
 @implementation AboutViewController
 
-- (IBAction)back:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
+/**
+ * In loadView, we load the game logo, which is a GIF animated picture, using OLImage library.
+ */
 - (void)loadView
 {
     [super loadView];
@@ -35,6 +35,11 @@
     [self.view addSubview:self.logo];
 }
 
-
+/**
+ * Action for back button. Pop out the previous view in navigation controller.
+ */
+- (IBAction)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

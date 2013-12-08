@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EndGameViewController : UIViewController <UIAlertViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UIImageView *didWinImage;
 @property (nonatomic) BOOL iWon;
+
 @end

@@ -9,35 +9,51 @@
 #import "TrailerViewController.h"
 
 @interface TrailerViewController ()
+
 @property (strong,nonatomic) MPMoviePlayerViewController *moviePlayerView;
+
 @end
 
 @implementation TrailerViewController
 
-
-
-
--(void)viewDidAppear:(BOOL)animated
+/**
+ * In viewDidAppear:, we play the trailer and register an observer to get notified
+ * when the playback finishes.
+ */
+- (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self playMovie];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlaybackFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayerView.moviePlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onPlaybackFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:self.moviePlayerView.moviePlayer];
 }
 
-- (void) onPlaybackFinish:(NSNotification*)notification {
+/**
+ * When playback finishes, we segue to main menu's view.
+ */
+- (void)onPlaybackFinish:(NSNotification*)notification
+{
     [self performSegueWithIdentifier: @"trailerToMenu"
                               sender: self];
 
 }
 
-- (IBAction)onTap:(UITapGestureRecognizer *)sender {
+/**
+ * When user taps the screen, we segue to main menu's view.
+ */
+- (IBAction)onTap:(UITapGestureRecognizer *)sender
+{
     [self.moviePlayerView.moviePlayer stop];
     [self performSegueWithIdentifier: @"trailerToMenu"
                               sender: self];
 }
 
-
--(void)playMovie
+/**
+ * Play the trailer in full-screen mode.
+ */
+- (void)playMovie
 {
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"m4v"];
     NSURL *fileURL = [NSURL fileURLWithPath:filepath];

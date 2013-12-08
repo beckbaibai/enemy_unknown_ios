@@ -13,17 +13,18 @@
 #import "EnemyUnknownAppDelegate.h"
 
 @interface LobbyViewController ()
+
 @property (strong,nonatomic) NSArray *scenarioArray;
 @property (nonatomic) NSString* scenarioSelected;
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
+
 @end
 
 @implementation LobbyViewController
 
-- (IBAction)back:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
+/**
+ * In loadView, we load the game logo, which is a GIF animated picture, using OLImage library.
+ */
 - (void)loadView
 {
     [super loadView];
@@ -39,53 +40,50 @@
     [self.view addSubview:self.logo];
 }
 
--(void)viewDidLoad
+/**
+ * In viewDidLoad, we initialize the array of scenario names, and determine whether to show iAds
+ * based on the user's past purchases.
+ */
+- (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.scenarioArray = [self scenarios];
+    
+    // Check if user has bought the ad-free version of our app, and determine whether to show iAds.
     NSUserDefaults *storage = [NSUserDefaults standardUserDefaults];
     BOOL bought = [storage boolForKey:@"EnemyUnknownAdFree"];
     self.hasAds = !bought;
     self.adView.hidden = YES;
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+/**
+ * In shouldPerformSegueWithIdentifier:sender:, we stop segue to the game if
+ * Internet is not available.
+ */
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    return 1;
+    if ([identifier isEqualToString:@"Start Game"]) {
+        // Test internet availability before segue to the game
+        EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        Reachability *reachablity = appDelegate.internetReachable;
+        if (![reachablity isReachable]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                                            message:@"You must be connected to the Internet to play a game."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return NO;
+        }
+    }
+    return YES;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [self.scenarioArray count];
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView
-            titleForRow:(NSInteger)row
-           forComponent:(NSInteger)component
-{
-    return [self.scenarioArray objectAtIndex:row];
-}
-
-- (UIView *)pickerView:(UIPickerView *)pickerView
-            viewForRow:(NSInteger)row
-          forComponent:(NSInteger)component
-           reusingView:(UIView *)view
-{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
-    label.backgroundColor = [UIColor blackColor];
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont fontWithName:@"Copperplate" size:20];
-    label.text = [self.scenarioArray objectAtIndex:row];
-    label.textAlignment = NSTextAlignmentCenter;
-    return label;
-}
-
--(NSArray *) scenarios
-{
-    return [[NSArray alloc] initWithObjects:@"Slayer",@"Tutorial",@"Capture the Flag",@"Vampire Hunter",@"Zombie is King",@"Rock Paper Sissors",@"War zone", nil];
-}
-
+/**
+ * In prepareForSegue:sender:, we provided the game view controller with the
+ * scenario that user has selected.
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"Start Game"])
@@ -124,27 +122,53 @@
     }
 }
 
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+/**
+ * Action for back button. Pop out the previous view in navigation controller.
+ */
+- (IBAction)back:(UIButton *)sender
 {
-    if ([identifier isEqualToString:@"Start Game"]) {
-        EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        Reachability *reachablity = appDelegate.internetReachable;
-        if (![reachablity isReachable]) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
-                                                            message:@"You must be connected to the Internet to play a game."
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
-            return NO;
-        }
-    }
-    return YES;
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+# pragma mark - Picker View
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.scenarioArray count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView
+            titleForRow:(NSInteger)row
+           forComponent:(NSInteger)component
+{
+    return [self.scenarioArray objectAtIndex:row];
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView
+            viewForRow:(NSInteger)row
+          forComponent:(NSInteger)component
+           reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+    label.backgroundColor = [UIColor blackColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"Copperplate" size:20];
+    label.text = [self.scenarioArray objectAtIndex:row];
+    label.textAlignment = NSTextAlignmentCenter;
+    return label;
+}
+
+# pragma mark - Banner View
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    if(self.hasAds){
+    if (self.hasAds) {
+        // If user has not purchased the ad-free version, show iAds.
         self.adView.hidden = NO;
     }
 }
@@ -169,8 +193,15 @@
     self.adView.hidden = YES;
 }
 
-- (IBAction)unwindToLobby:(UIStoryboardSegue *)sender
+#pragma mark - Helper functions
+
+/**
+ * Provide an array of available scenario names.
+ */
+- (NSArray *)scenarios
 {
+    return [[NSArray alloc] initWithObjects:@"Slayer", @"Tutorial", @"Capture the Flag", @"Vampire Hunter",
+            @"Zombie is King", @"Rock Paper Sissors", @"War zone", nil];
 }
 
 @end

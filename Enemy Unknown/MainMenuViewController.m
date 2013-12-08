@@ -20,6 +20,9 @@
 
 @implementation MainMenuViewController
 
+/**
+ * In loadView, we load the game logo, which is a GIF animated picture, using OLImage library.
+ */
 - (void)loadView
 {
     [super loadView];
@@ -34,78 +37,33 @@
     [self.view addSubview:self.logo];
 }
 
-- (IBAction)gameCenterOpen:(UIButton *)sender {
-    [self showGameCenter];
-
-}
-
+/**
+ * In viewDidLoad, we authenticate local player for game center to determine whether game center
+ * should be available to the current user, and start playing background music.
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Authenticate local player for game center
     [self authenticateLocalPlayer];
-	// Do any additional setup after loading the view.
+	
+    // Start playing background music
     EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     MusicController *musicPlayer = [MusicController alloc];
     appDelegate.musicPlayer = musicPlayer;
-    [appDelegate.musicPlayer initMenuPlayer];
+    [appDelegate.musicPlayer initMenuMusic];
     [appDelegate.musicPlayer.menuPlayer play];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void) authenticateLocalPlayer
-{
-        GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
-        __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
-        localPlayer.authenticateHandler = ^(UIViewController *receivedViewController, NSError *error){
-            if (receivedViewController != nil)
-            {
-                [self presentViewController:receivedViewController animated:YES completion:nil];
-            }
-            else if (blockLocalPlayer.isAuthenticated)
-            {
-                 NSLog(@"Game center now available");
-            }
-            else
-            {
-                NSLog(@"Game center not available");
-            }
-        };
-
-}
-
-- (void)showGameCenter
-{
-    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
-    __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
-    if(blockLocalPlayer.isAuthenticated){
-        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
-        if (gameCenterController != nil)
-        {
-            gameCenterController.gameCenterDelegate = self;
-            gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
-            [self presentViewController: gameCenterController animated: YES completion:nil];
-        }
-    }else{
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Center unavailable!"
-                                                          message:@"\n If you did not login, click 'Ok' to login to game center.\n\n If game center is disabled, logout and then login again to renable game center for Enemy Unknown"
-                                                         delegate:self
-                                                cancelButtonTitle:@"Cancel"
-                                                otherButtonTitles:@"Ok", nil];
-        [message show];
-       
-    }
-    
-
-}
-
+/**
+ * In shouldPerformSegueWithIdentifier:sender:, we stop segue to In-App Purchase if
+ * Internet is not available.
+ */
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"IAP"]) {
+        // Test internet availability before segue to In-App Purchase
         EnemyUnknownAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         Reachability *reachablity = appDelegate.internetReachable;
         if (![reachablity isReachable]) {
@@ -121,12 +79,66 @@
     return YES;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+#pragma mark - Game Center
+
+/**
+ * Action for "Game Center" button. Show the game center view.
+ */
+- (IBAction)gameCenterOpen:(UIButton *)sender
 {
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    if([title isEqualToString:@"Ok"])
-    {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:"]];
+    [self showGameCenter];
+}
+
+/**
+ * Authenticate local player for game center.
+ */
+- (void)authenticateLocalPlayer
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
+    localPlayer.authenticateHandler = ^(UIViewController *receivedViewController, NSError *error){
+        if (receivedViewController != nil)
+        {
+            [self presentViewController:receivedViewController animated:YES completion:nil];
+        }
+        else if (blockLocalPlayer.isAuthenticated)
+        {
+            NSLog(@"Game center now available");
+        }
+        else
+        {
+            NSLog(@"Game center not available");
+        }
+    };
+
+}
+
+/**
+ * Show the game center view for current player.
+ */
+- (void)showGameCenter
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    __weak GKLocalPlayer *blockLocalPlayer = localPlayer;
+    
+    if (blockLocalPlayer.isAuthenticated) {
+        // Player is authenticated, show the game center view
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        if (gameCenterController != nil)
+        {
+            gameCenterController.gameCenterDelegate = self;
+            gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
+            [self presentViewController: gameCenterController animated: YES completion:nil];
+        }
+    } else {
+        // Player is not authenticated, show an alert view
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Center unavailable!"
+                                                          message:@"\n If you did not login, click 'Ok' to login to game center.\n\n If game center is disabled, logout and then login again to renable game center for Enemy Unknown"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Ok", nil];
+        [message show];
+       
     }
 }
 
@@ -135,6 +147,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Alert View
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Ok"])
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:"]];
+    }
+}
 
 @end
